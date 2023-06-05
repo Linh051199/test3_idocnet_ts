@@ -1,0 +1,157 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  height: 91px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #ddd;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    .title {
+      display: flex;
+      align-items: center;
+      font-size: var(--font-size17);
+      height: 100%;
+
+      p {
+        color: #aaa;
+      }
+
+      a {
+        color: var(--text-color-black);
+        margin-left: 5px;
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+
+      span {
+        height: 25%;
+        border-right: 1px solid #333;
+        margin: 0 5px;
+      }
+    }
+
+    .link {
+      display: flex;
+      font-size: var(--font-size17);
+      color: var(--text-color-black);
+
+      .link__item {
+        margin-left: 20px;
+
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .help {
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+
+    font-size: var(--font-size20);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+  }
+
+  .help__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    position: fixed;
+    z-index: 100;
+    right: 0;
+    bottom: 105px;
+    width: 250px;
+    background-color: #f6f7f9;
+    padding: 10px;
+
+    .help__header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h3 {
+        font-size: var(--font-size30);
+        font-family: "Bodoni Moda", serif;
+        font-weight: 300;
+        margin-bottom: 15px;
+      }
+
+      p {
+        text-align: center;
+        font-size: var(--font-size17);
+        color: var(--text-color-black);
+        line-height: 1.8;
+        color: #6a717c;
+      }
+    }
+
+    .help__form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .help__select {
+        width: 100%;
+        height: 41px;
+        border: none;
+        outline: none;
+        margin-bottom: 20px;
+        background-color: #eff2f6;
+        border-radius: 5px;
+        font-size: var(--font-size14);
+        color: #6a717c;
+        padding: 10px;
+      }
+
+      .help__input {
+        width: 100%;
+        height: 41px;
+        border: none;
+        outline: none;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        padding: 10px;
+      }
+
+      textarea {
+        font-family: "Jost", sans-serif !important;
+        font-size: var(--font-size14);
+        height: 140px;
+        width: 100%;
+        padding: 10px;
+      }
+    }
+
+    button {
+      height: 51px;
+      width: 100%;
+      background-color: #171b20;
+      border-radius: 5px;
+      color: var(--text-color-white);
+      font-size: var(--font-size14);
+      font-weight: var(--font-weight-semiBold);
+      margin-top: 20px;
+      opacity: 1;
+      border: none;
+      outline: none;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+  }
+}
