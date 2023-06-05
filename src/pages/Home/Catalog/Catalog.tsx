@@ -2,7 +2,8 @@ import React from "react";
 import classNames from "classnames/bind";
 import styles from "./Catalog.module.scss";
 import images from "../../../assets/images";
-import Product from "../../Product/Product";
+import ProductItem from "../../../components/ProductItem/ProductItem";
+import { productData } from "../../../data/data";
 
 const cx = classNames.bind(styles);
 
@@ -25,9 +26,11 @@ const Catalog = () => {
       </div>
 
       <div className={cx("productList")}>
-        <div className={cx("productListItem")}>
-          <Product />
-        </div>
+        {productData.map((product) => (
+          <div key={product.id} className={cx("productListItem")}>
+            <ProductItem data={product} />
+          </div>
+        ))}
       </div>
     </div>
   );

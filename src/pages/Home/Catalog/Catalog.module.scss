@@ -25,4 +25,14 @@
       text-align: center;
     }
   }
+
+  .productList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .productListItem {
+      width: 24%;
+    }
+  }
 }
