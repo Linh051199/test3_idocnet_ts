@@ -1,0 +1,109 @@
+.wrapper {
+  display: flex;
+  height: 765px;
+}
+
+.left {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  background-image: url("https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-home-pic1.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 240px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+
+  .left__title {
+    text-transform: uppercase;
+    font-size: var(--font-size14);
+    font-weight: var(--font-weight-semiBold);
+  }
+
+  .left__percent {
+    font-size: var(--font-size120);
+    font-family: "Bodoni Moda", serif;
+    font-weight: 600;
+    color: #ebc989;
+  }
+
+  .left__sale {
+    position: absolute;
+    top: 360px;
+    background-color: transparent;
+
+    font-size: var(--font-size55);
+    font-family: "Bodoni Moda", serif;
+    font-weight: 600;
+    text-align: center;
+  }
+  .left__clock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .left__clockItem {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 70px;
+      width: 30%;
+
+      p {
+        font-size: var(--font-size30);
+        font-family: "Bodoni Moda", serif;
+        margin: 15px 0 15px 0;
+      }
+
+      .left__clockItemNum {
+        font-size: var(--font-size90);
+        color: #ebc989;
+      }
+
+      span {
+        border-bottom: 1px solid #ddd;
+        width: 40%;
+      }
+    }
+  }
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding-top: 80px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  background-color: #eaf0f7;
+  align-content: center;
+  color: var(--text-color-black);
+
+  p {
+    font-size: var(--font-size14);
+    font-weight: var(--font-weight-semiBold);
+    text-align: center;
+  }
+
+  .right__headerHighlight {
+    font-family: "Bodoni Moda", serif;
+    font-size: var(--font-size55);
+    text-align: center;
+    font-weight: 500;
+
+    span {
+      color: #94afc1;
+    }
+  }
+}
