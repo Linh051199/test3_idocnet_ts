@@ -9,7 +9,7 @@ export const productData: IProductType[] = [
     productImageBack:
       "https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-product1b-500x625.webp",
     productPrice: 35.0,
-    productPriceSale: 15.0,
+    productPriceSale: 45.0,
     colorList: [
       { name: "Blue", code: "#3a6380" },
       { name: "Brown", code: "#773d49" },
@@ -39,7 +39,7 @@ export const productData: IProductType[] = [
     productImageBack:
       "https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-product1b-500x625.webp",
     productPrice: 35.0,
-    productPriceSale: 15.0,
+    productPriceSale: 45.0,
     colorList: [
       { name: "Blue", code: "#3a6380" },
       { name: "Brown", code: "#773d49" },
@@ -69,7 +69,7 @@ export const productData: IProductType[] = [
     productImageBack:
       "https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-product1b-500x625.webp",
     productPrice: 35.0,
-    productPriceSale: 15.0,
+    productPriceSale: 45.0,
     colorList: [
       { name: "Blue", code: "#3a6380" },
       { name: "Brown", code: "#773d49" },
@@ -99,7 +99,7 @@ export const productData: IProductType[] = [
     productImageBack:
       "https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-product1b-500x625.webp",
     productPrice: 35.0,
-    productPriceSale: 15.0,
+    productPriceSale: 45.0,
     colorList: [
       { name: "Blue", code: "#3a6380" },
       { name: "Brown", code: "#773d49" },

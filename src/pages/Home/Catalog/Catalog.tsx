@@ -32,6 +32,11 @@ const Catalog = () => {
           </div>
         ))}
       </div>
+
+      <div className={cx("button")}>
+        <button>go to shop</button>
+        <button>see promotion</button>
+      </div>
     </div>
   );
 };

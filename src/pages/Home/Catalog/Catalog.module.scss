@@ -33,6 +33,40 @@
 
     .productListItem {
       width: 24%;
+      margin-bottom: 20px;
+    }
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+
+    :first-child {
+      background-color: #111;
+      color: var(--text-color-white);
+      margin-right: 20px;
+    }
+
+    :nth-child(2) {
+      color: #626262;
+      background-color: #ececec;
+    }
+
+    button {
+      font-size: var(--font-size15);
+      font-weight: var(--font-weight-semiBold);
+      text-transform: uppercase;
+      border: none;
+      outline: none;
+      padding: 18px 40px;
+      border-radius: 5px;
+
+      &:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
     }
   }
 }
