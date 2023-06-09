@@ -1,0 +1,55 @@
+.wrapper {
+  background-color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  .image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    img {
+      width: 15%;
+    }
+  }
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 100px;
+
+  h2 {
+    font-family: "Bodoni Moda", serif;
+    font-weight: 400;
+    font-size: var(--font-size30);
+    margin-bottom: 10px;
+  }
+
+  span {
+    color: #6a727d;
+    font-size: var(--font-size17);
+
+    a {
+      color: #d0b583;
+
+      &:hover {
+        opacity: 1 !important;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  p {
+    font-size: var(--font-size20);
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+}

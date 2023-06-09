@@ -61,6 +61,7 @@
 
       i {
         font-size: var(--font-size20);
+        color: var(--text-color-black);
 
         &:hover {
           color: #ebc989;
@@ -76,6 +77,8 @@
     text-align: center;
     margin: 20px 0 10px 0;
     flex: 1;
+    color: var(--text-color-black);
+    font-family: "Bodoni Moda", serif;
   }
 
   .colorList {

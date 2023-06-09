@@ -1,0 +1,120 @@
+.wrapper {
+  background-color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .titleList {
+    display: flex;
+    font-size: var(--font-size26);
+    margin-top: 80px;
+    margin-bottom: 100px;
+
+    div {
+      margin: 0 30px;
+      padding: 10px 16px;
+    }
+  }
+
+  .subTitle {
+    font-size: var(--font-size20);
+    text-align: center;
+    color: #373f4b;
+  }
+
+  .highLight {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 350px;
+    margin-bottom: 30px;
+
+    .item {
+      width: 40%;
+      margin-bottom: 20px;
+      margin-top: 30px;
+      p {
+        display: flex;
+        justify-content: center;
+        font-size: var(--font-size14);
+        font-weight: var(--font-weight-medium);
+        margin-bottom: 10px;
+      }
+
+      .itemList {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        p {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          color: var(--text-color-white);
+
+          i {
+            font-size: var(--font-size20);
+          }
+        }
+      }
+
+      .activeFriendly {
+      }
+    }
+  }
+
+  .imageAD {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    .imageAD__item {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      width: 49%;
+      height: 210px;
+      padding: 20px;
+      background-color: #fafafa;
+      img {
+        width: 50%;
+        height: auto;
+      }
+
+      .imageAD__desc {
+        margin-left: 20px;
+        p {
+          font-family: "Bodoni Moda", serif;
+          font-size: var(--font-size20);
+          margin-bottom: 10px;
+        }
+        span {
+          color: #6e7680;
+          font-size: var(--font-size17);
+          line-height: 1.8;
+        }
+      }
+    }
+  }
+
+  .desc1,
+  .desc2 {
+    font-size: var(--font-size17);
+    text-align: center;
+    color: #6e7680;
+    margin-top: 30px;
+  }
+
+  .desc2 {
+    margin-bottom: 100px;
+  }
+}

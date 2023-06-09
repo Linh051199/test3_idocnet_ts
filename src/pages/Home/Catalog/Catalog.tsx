@@ -9,33 +9,35 @@ const cx = classNames.bind(styles);
 
 const Catalog = () => {
   return (
-    <div className={cx("wrapper", "grid", "wide")}>
-      <div className={cx("header")}>
-        <img src={images.line} alt="img" />
+    <div className={cx("wrapper", "grid")}>
+      <div className={cx("container", "grid", "wide")}>
+        <div className={cx("header")}>
+          <img src={images.line} alt="img" />
 
-        <p>
-          Welcome in our child's world.
-          <br /> All our products are made
-          <br /> from generations with passion.
-        </p>
+          <p>
+            Welcome in our child's world.
+            <br /> All our products are made
+            <br /> from generations with passion.
+          </p>
 
-        <h2>
-          Product's
-          <br /> Catalog
-        </h2>
-      </div>
+          <h2>
+            Product's
+            <br /> Catalog
+          </h2>
+        </div>
 
-      <div className={cx("productList")}>
-        {productData.map((product) => (
-          <div key={product.id} className={cx("productListItem")}>
-            <ProductItem data={product} />
-          </div>
-        ))}
-      </div>
+        <div className={cx("productList")}>
+          {productData.map((product) => (
+            <div key={product.id} className={cx("productListItem")}>
+              <ProductItem data={product} />
+            </div>
+          ))}
+        </div>
 
-      <div className={cx("button")}>
-        <button>go to shop</button>
-        <button>see promotion</button>
+        <div className={cx("button")}>
+          <button>go to shop</button>
+          <button>see promotion</button>
+        </div>
       </div>
     </div>
   );

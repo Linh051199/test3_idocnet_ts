@@ -4,6 +4,7 @@ import isEmpty from "validator/lib/isEmpty";
 
 import styles from "./HeaderNav.module.scss";
 import Cart from "./Cart/Cart";
+import { Link } from "react-router-dom";
 
 const cx = classNames.bind(styles);
 
@@ -11,14 +12,20 @@ interface IMessErrlogin {
   name?: string;
   password?: string;
 }
+interface IProps {
+  active: string;
+}
 
-const HeaderNav = () => {
+const HeaderNav: React.FC<IProps> = (props) => {
   const [showLogin, setShowLogin] = useState<boolean>(false);
   const [showCart, setShowCart] = useState<boolean>(false);
   const [showSearch, setShowSearch] = useState<boolean>(false);
   const [nameLogin, setNameLogin] = useState<string>("");
   const [passwordLogin, setPasswordLogin] = useState<string>("");
   const [messErrLogin, setMessErrLogin] = useState<IMessErrlogin>({});
+
+  const { active } = props;
+  console.log("🚀 ~ active:", active);
 
   const handleOnChangeNameLogin = (e: any) => {
     setNameLogin(e.target.value);
@@ -51,8 +58,24 @@ const HeaderNav = () => {
   return (
     <div className={cx("wrapper", "grid", "wide")}>
       <div className={cx("nav")}>
-        <div className={cx("nav__item", "active")}>HOME</div>
-        <div className={cx("nav__item")}>our products</div>
+        <Link to={"/"}>
+          <div
+            className={
+              active === "Home" ? cx("nav__item", "active") : cx("nav__item")
+            }
+          >
+            HOME
+          </div>
+        </Link>
+        <div
+          className={
+            active === "ourProduct"
+              ? cx("nav__item", "active")
+              : cx("nav__item")
+          }
+        >
+          our products
+        </div>
         <div className={cx("nav__item")}>about us</div>
         <div className={cx("nav__item")}>blog</div>
         <div className={cx("nav__item")}>client center</div>

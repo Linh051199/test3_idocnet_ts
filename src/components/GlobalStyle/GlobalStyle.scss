@@ -23,9 +23,11 @@
   --font-size38: 38px;
   --font-size42: 42px;
   --font-size45: 45px;
+  --font-size48: 48px;
   --font-size52: 52px;
   --font-size55: 55px;
   --font-size58: 58px;
+  --font-size77: 77px;
   --font-size90: 90px;
   --font-size96: 96px;
   --font-size120: 120px;
@@ -60,10 +62,9 @@ body {
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
-
-ul li {
-  list-style-type: none;
+p {
   margin-bottom: 0;
 }
 

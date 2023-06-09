@@ -5,7 +5,7 @@ import styles from "./HeaderBottom.module.scss";
 
 const cx = classNames.bind(styles);
 
-const HeaderBottom = () => {
+const HeaderBottom: React.FC = (props) => {
   return (
     <div className={cx("wrapper", "grid", "wide")}>
       <img

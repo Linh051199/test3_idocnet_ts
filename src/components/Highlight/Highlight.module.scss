@@ -1,0 +1,28 @@
+.wrapper {
+  background-color: #fff;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 0;
+
+    .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 25%;
+
+      img {
+        width: 42px;
+        height: 42px;
+        margin-right: 20px;
+      }
+
+      p {
+        font-size: var(--font-size14);
+        font-weight: var(--font-weight-semiBold);
+      }
+    }
+  }
+}

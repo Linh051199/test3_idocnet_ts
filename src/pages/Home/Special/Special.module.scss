@@ -1,6 +1,10 @@
 .wrapper {
-  display: flex;
-  height: 765px;
+  background-color: #fff;
+
+  .container {
+    display: flex;
+    height: 765px;
+  }
 }
 
 .left {
@@ -104,6 +108,39 @@
 
     span {
       color: #94afc1;
+    }
+  }
+  .right__carousel {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.slider1__wrapper,
+.slider2__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 60px;
+  img {
+    width: 30%;
+    height: 100%;
+  }
+
+  p {
+    font-size: var(--font-size17);
+    color: #6a717c;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .gift__name {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    img {
+      width: 20%;
     }
   }
 }
