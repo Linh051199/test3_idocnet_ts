@@ -19,7 +19,8 @@
     }
 
     &:hover .subs {
-      display: flex;
+      // display: flex;
+      bottom: 0;
     }
 
     .image {
@@ -48,29 +49,44 @@
     }
 
     .subs {
-      position: absolute;
-      z-index: 99;
-      bottom: 0;
+      // position: absolute;
+      // z-index: 99;
+      // bottom: 0;
 
-      display: none;
-      justify-content: space-around;
-      align-items: center;
+      // display: none;
+      // justify-content: space-around;
+      // align-items: center;
+      // width: 100%;
+      // height: 60px;
+      // background-color: #fff;
+      position: absolute;
       width: 100%;
-      height: 60px;
+      left: 0;
+      bottom: -60px;
+      display: flex;
       background-color: #fff;
+      padding: 20px;
+      justify-content: space-around;
+      transition: all 0.3s ease-in-out;
+      z-index: 4;
 
       i {
-        font-size: var(--font-size20);
-        color: var(--text-color-black);
+        // font-size: var(--font-size20);
+        // color: var(--text-color-black);
 
-        &:hover {
-          color: #ebc989;
-        }
+        // &:hover {
+        //   color: #ebc989;
+        // }
+        color: #000;
+        font-size: 20px;
+        cursor: pointer;
       }
     }
   }
 
   .name {
+    position: relative;
+    z-index: 99;
     display: flex;
     align-items: start;
     font-size: var(--font-size20);
@@ -79,6 +95,7 @@
     flex: 1;
     color: var(--text-color-black);
     font-family: "Bodoni Moda", serif;
+    background-color: #fff;
   }
 
   .colorList {

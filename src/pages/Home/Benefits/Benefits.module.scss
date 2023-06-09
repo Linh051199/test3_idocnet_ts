@@ -105,14 +105,148 @@
       margin: 120px 0;
 
       .board__left {
-        flex: 0.7;
-        background-image: url("https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-blog-pic1.webp");
-        background-size: cover;
-        background-repeat: no-repeat;
+        position: relative;
+        width: 65%;
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          background-color: rgba(0, 0, 0, 0.3);
+          display: none;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        .content {
+          position: absolute;
+          bottom: 0;
+          color: var(--text-color-white);
+          margin-bottom: 20px;
+          margin-left: 20px;
+
+          .content__header {
+            display: flex;
+            align-items: center;
+            font-size: var(--font-size17);
+            i {
+              margin-right: 10px;
+            }
+            p {
+              margin-right: 10px;
+            }
+          }
+          .content__footer {
+            font-size: var(--font-size30);
+            font-family: "Bodoni Moda", serif;
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 5px;
+          background-color: #fff;
+          margin-bottom: 15px;
+          margin-left: 20px;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:hover .content {
+          margin-bottom: 40px;
+          transition: margin-bottom linear 0.2s;
+        }
+
+        &:hover::after {
+          width: 150px;
+          transition: width linear 0.2s;
+        }
+        &:hover .overlay {
+          display: block;
+        }
+        // background-image: url("https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-blog-pic1.webp");
+        // background-size: cover;
+        // background-repeat: no-repeat;
+
+        // .desc-wrapper {
+        //   position: absolute;
+        //   left: 0;
+        //   bottom: -20px;
+        //   width: 100%;
+        //   z-index: 4;
+        //   transition: all 0.4s ease-out;
+
+        //   .desc {
+        //     background-color: url("https://themes.muffingroup.com/be/babyshop/wp-content/themes/betheme/images/blog_masonry_tile_gradient.png")
+        //       top left repeat-x;
+        //     padding: 70px 25px 30px;
+        //     background-position-y: -1px;
+
+        //     .post-meta {
+        //       color: rgba(255, 255, 255, 0.7);
+
+        //       .author {
+        //         a {
+        //           color: rgba(255, 255, 255, 0.7);
+        //         }
+        //       }
+
+        //       .date {
+        //       }
+        //     }
+
+        //     .post-title {
+        //       font-size: 30px;
+        //       line-height: 40px;
+        //       font-weight: 400;
+
+        //       h3 {
+        //         a {
+        //           color: #fff;
+        //         }
+        //       }
+
+        //       &::after {
+        //         background-color: #ffffff;
+        //         content: "";
+        //         display: block;
+        //         height: 3px;
+        //         margin-top: 20px;
+        //         width: 0;
+        //         transition: all 0.4s ease-out;
+        //       }
+        //     }
+        //   }
+        // }
+        // &:hover {
+        //   .photo-wrapper::after {
+        //     opacity: 1;
+        //   }
+
+        //   .desc-wrapper {
+        //     transform: translateY(-20px);
+        //     .desc {
+        //       .post-title::after {
+        //         width: 20%;
+        //       }
+        //     }
+        //   }
+        // }
       }
 
       .board__right {
-        flex: 0.3;
+        width: 35%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -120,18 +254,250 @@
 
         .board__rightTop {
           height: 50%;
-          background-image: url("https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-blog-pic2.webp");
-          background-size: cover;
-          background-repeat: no-repeat;
+          position: relative;
+          .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            display: none;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+          .content {
+            position: absolute;
+            bottom: 0;
+            color: var(--text-color-white);
+            margin-bottom: 20px;
+            margin-left: 20px;
+
+            .content__header {
+              display: flex;
+              align-items: center;
+              font-size: var(--font-size12);
+              i {
+                margin-right: 10px;
+              }
+              p {
+                margin-right: 10px;
+              }
+            }
+            .content__footer {
+              font-size: var(--font-size24);
+              font-family: "Bodoni Moda", serif;
+            }
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 5px;
+            background-color: #fff;
+            margin-bottom: 15px;
+            margin-left: 20px;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          &:hover .content {
+            margin-bottom: 40px;
+            transition: margin-bottom linear 0.2s;
+          }
+
+          &:hover::after {
+            width: 150px;
+            transition: width linear 0.2s;
+          }
+          &:hover .overlay {
+            display: block;
+          }
+          // background-image: url("https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-blog-pic2.webp");
+          // background-size: cover;
+          // background-repeat: no-repeat;
         }
 
         .board__rightBottom {
           height: 50%;
-          background-image: url("https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-blog-pic3.webp");
-          background-size: cover;
-          background-repeat: no-repeat;
+          position: relative;
+          .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            display: none;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+          }
+          .content {
+            position: absolute;
+            bottom: 0;
+            color: var(--text-color-white);
+            margin-bottom: 20px;
+            margin-left: 20px;
+
+            .content__header {
+              display: flex;
+              align-items: center;
+              font-size: var(--font-size12);
+              i {
+                margin-right: 10px;
+              }
+              p {
+                margin-right: 10px;
+              }
+            }
+            .content__footer {
+              font-size: var(--font-size24);
+              font-family: "Bodoni Moda", serif;
+            }
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 5px;
+            background-color: #fff;
+            margin-bottom: 15px;
+            margin-left: 20px;
+          }
+
+          &:hover {
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.5) !important;
+          }
+
+          &:hover .content {
+            margin-bottom: 40px;
+            transition: margin-bottom linear 0.2s;
+          }
+
+          &:hover::after {
+            width: 150px;
+            transition: width linear 0.2s;
+          }
+          &:hover .overlay {
+            display: block;
+          }
+          // background-image: url("https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-blog-pic3.webp");
+          // background-size: cover;
+          // background-repeat: no-repeat;
         }
       }
     }
+    // .blogpost-wrapper {
+    //   padding-top: 40px;
+
+    //   .blog-post {
+    //     position: relative;
+
+    //     .photo-wrapper {
+    //       &::after {
+    //         content: "";
+    //         position: absolute;
+    //         z-index: 2;
+    //         left: 0;
+    //         top: 0;
+    //         width: 100%;
+    //         height: 100%;
+    //         background: rgba(0, 0, 0, 0.2);
+    //         opacity: 0;
+    //         transition: all 0.6s ease-out;
+    //       }
+    //     }
+
+    //     .desc-wrapper {
+    //       position: absolute;
+    //       left: 0;
+    //       bottom: -20px;
+    //       width: 100%;
+    //       z-index: 4;
+    //       transition: all 0.4s ease-out;
+
+    //       .desc {
+    //         background-color: url(https://themes.muffingroup.com/be/babyshop/wp-content/themes/betheme/images/blog_masonry_tile_gradient.png)
+    //           top left repeat-x;
+    //         padding: 70px 25px 30px;
+    //         background-position-y: -1px;
+
+    //         .post-meta {
+    //           color: rgba(255, 255, 255, 0.7);
+
+    //           .author {
+    //             a {
+    //               color: rgba(255, 255, 255, 0.7);
+    //             }
+    //           }
+
+    //           .date {
+    //           }
+    //         }
+
+    //         .post-title {
+    //           font-size: 30px;
+    //           line-height: 40px;
+    //           font-weight: 400;
+
+    //           h3 {
+    //             a {
+    //               color: #fff;
+    //             }
+    //           }
+
+    //           &::after {
+    //             background-color: #ffffff;
+    //             content: "";
+    //             display: block;
+    //             height: 3px;
+    //             margin-top: 20px;
+    //             width: 0;
+    //             transition: all 0.4s ease-out;
+    //           }
+    //         }
+    //       }
+    //     }
+
+    //     &:hover {
+    //       .photo-wrapper::after {
+    //         opacity: 1;
+    //       }
+
+    //       .desc-wrapper {
+    //         transform: translateY(-20px);
+    //         .desc {
+    //           .post-title::after {
+    //             width: 20%;
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+
+    //   @media only screen and (max-width: 768px) {
+    //     .row {
+    //       flex-direction: column;
+
+    //       div {
+    //         width: 100%;
+    //       }
+    //     }
+    //   }
+    // }
   }
 }

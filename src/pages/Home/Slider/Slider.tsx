@@ -76,9 +76,18 @@ const Slider = () => {
                 <span></span>
               </div>
               <div className={cx("sub__topAge")}>
-                <div className={cx("sub__topAgeItem")}>0 - 2</div>
+                <a href="#">
+                  <span>0 - 2</span>
+                </a>
+                <a href="#">
+                  <span>2- 4</span>
+                </a>
+                <a href="#">
+                  <span>4- 6</span>
+                </a>
+                {/* <div className={cx("sub__topAgeItem")}>0 - 2</div>
                 <div className={cx("sub__topAgeItem")}>2 - 4</div>
-                <div className={cx("sub__topAgeItem")}>4 - 6</div>
+                <div className={cx("sub__topAgeItem")}>4 - 6</div> */}
               </div>
             </div>
             <div className={cx("sub__bottom")}>
@@ -86,35 +95,69 @@ const Slider = () => {
                 src="https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-promo-pic1.webp"
                 alt="img"
               />
-              <p>Duvet Cover Set</p>
-              <span>-40% off</span>
+              <h2>Duvet Cover Set</h2>
+              <p>-40% off</p>
+              <a href="#">
+                <span className={cx("view")}>VIEW COLLECTION</span>
+              </a>
             </div>
           </div>
         </div>
         <div className={cx("navList")}>
           <div className={cx("navList__item")}>
-            <span>Bed Sets</span>
+            <a href="">
+              <span>Bed Sets</span>
+              <i className="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
+
           <div className={cx("navList__item")}>
-            <span>Bed Sets</span>
+            <a href="">
+              <span>Sleepwear</span>
+              <i className="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
+
           <div className={cx("navList__item")}>
-            <span>Bed Sets</span>
+            <a href="">
+              <span>Pyjamas</span>
+              <i className="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
+
           <div className={cx("navList__item")}>
-            <span>Bed Sets</span>
+            <a href="">
+              <span>Nighties</span>
+              <i className="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
+
           <div className={cx("navList__item")}>
-            <span>Bed Sets</span>
+            <a href="">
+              <span>Bathrobes</span>
+              <i className="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
+
           <div className={cx("navList__item")}>
-            <span>Bed Sets</span>
+            <a href="">
+              <span>Classic</span>
+              <i className="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
+
           <div className={cx("navList__item")}>
-            <span>Bed Sets</span>
+            <a href="">
+              <span>Fancy</span>
+              <i className="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
+
           <div className={cx("navList__item")}>
-            <span>Bed Sets</span>
+            <a href="">
+              <span>More products</span>
+              <i className="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
         </div>
       </div>

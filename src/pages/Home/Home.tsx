@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import classNames from "classnames/bind";
 
 import styles from "./Home.module.scss";
@@ -10,12 +10,30 @@ import Special from "./Special/Special";
 import Benefits from "./Benefits/Benefits";
 import BestSeller from "./BestSeller/BestSeller";
 import Highlight from "../../components/Highlight/Highlight";
+import HeaderFixed from "../../components/Header/HeaderFixed/HeaderFixed";
 
 const cx = classNames.bind(styles);
 
 const Home = () => {
+  const [show, setShow] = useState<boolean>(false);
+  const controlHeader = () => {
+    if (window.scrollY > 200) {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlHeader);
+    return () => {
+      window.removeEventListener("scroll", controlHeader);
+    };
+  }, []);
+
   return (
     <div className={cx("home__wrapper")}>
+      {show && <HeaderFixed />}
       <Header active="Home" />
       <Slider />
       <Catalog />
