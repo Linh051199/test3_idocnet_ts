@@ -74,3 +74,69 @@
     }
   }
 }
+
+/* Tablet - PC with low resolution */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .header {
+    img {
+      width: 150px;
+      height: 10px;
+      margin: 50px 0;
+    }
+
+    p {
+      font-size: var(--font-size26) !important;
+    }
+
+    h2 {
+      font-size: var(--font-size48) !important;
+    }
+  }
+  .productList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .productListItem {
+      width: 48% !important;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .header {
+    img {
+      width: 150px;
+      height: 10px;
+      margin: 50px 0;
+    }
+
+    p {
+      font-size: var(--font-size20) !important;
+    }
+
+    h2 {
+      font-size: var(--font-size42) !important;
+    }
+  }
+  .productList {
+    justify-content: center !important;
+    .productListItem {
+      width: 90% !important;
+    }
+  }
+  .button {
+    flex-direction: column;
+
+    :first-child {
+      margin-right: 0 !important;
+      margin-bottom: 20px;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+}

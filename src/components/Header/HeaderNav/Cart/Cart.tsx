@@ -2,6 +2,8 @@ import React from "react";
 import classNames from "classnames/bind";
 
 import styles from "./Cart.module.scss";
+import { cartData } from "../../../../data/data";
+import CartItem from "./CartItem";
 
 const cx = classNames.bind(styles);
 
@@ -26,7 +28,13 @@ const Cart: React.FC<IProps> = ({ setShowCart }) => {
             Cart
           </div>
         </div>
-        <div className={cx("body")}></div>
+        <div className={cx("body")}>
+          {cartData?.map((cart) => (
+            <div key={cart.id} className={cx("cartItem")}>
+              <CartItem data={cart} />
+            </div>
+          ))}
+        </div>
         <div className={cx("footer")}>
           <div className={cx("footer__subTotal")}>
             <p>Subtotal:</p>

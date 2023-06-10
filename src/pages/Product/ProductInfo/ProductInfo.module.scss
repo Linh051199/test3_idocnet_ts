@@ -81,13 +81,80 @@
       }
     }
 
+    .height {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+
+      p {
+        font-size: var(--font-size17);
+        width: 150px;
+      }
+
+      .heightList {
+        display: flex;
+
+        .heightItem {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: var(--font-size14);
+          width: 38px;
+          height: 32px;
+          margin-right: 10px;
+          border: 1px solid #eee;
+          border-radius: 3px;
+
+          &:hover {
+            border-color: #ccc;
+            cursor: pointer;
+          }
+        }
+
+        .heightActive {
+          border-color: #ccc;
+        }
+      }
+    }
+
+    .age {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+
+      p {
+        font-size: var(--font-size17);
+        width: 150px;
+      }
+
+      select {
+        width: 230px;
+        height: 40px;
+        background-color: #eff2f6;
+        outline: none;
+        border: none;
+        font-size: var(--font-size15);
+        padding-left: 10px;
+
+        option {
+        }
+      }
+    }
+
     .colorList {
       display: flex;
       align-items: center;
 
       p {
         font-size: var(--font-size17);
-        margin-right: 20px;
+        width: 150px;
+
         margin-bottom: 0;
       }
 
@@ -236,8 +303,8 @@
 
   .productImage {
     position: sticky;
-    // position: -webkit-sticky;
-    top: 0;
+    position: -webkit-sticky;
+    top: 60px;
     max-height: 63vh;
 
     flex: 1;

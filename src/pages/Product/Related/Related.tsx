@@ -4,7 +4,6 @@ import styles from "./Related.module.scss";
 import images from "../../../assets/images";
 import { bestSellerData } from "../../../data/data";
 import ProductItem from "../../../components/ProductItem/ProductItem";
-console.log("🚀 ~ bestSellerData:", bestSellerData);
 
 const cx = classNames.bind(styles);
 const Related = () => {

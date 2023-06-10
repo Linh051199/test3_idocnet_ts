@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import classNames from "classnames/bind";
 import isEmpty from "validator/lib/isEmpty";
+import { Link } from "react-router-dom";
 
 import styles from "./HeaderNav.module.scss";
 import Cart from "./Cart/Cart";
-import { Link } from "react-router-dom";
+import { cartData } from "../../../data/data";
 
 const cx = classNames.bind(styles);
 
@@ -17,6 +18,7 @@ interface IProps {
 }
 
 const HeaderNav: React.FC<IProps> = (props) => {
+  const [showNav, setShowNav] = useState(false);
   const [showLogin, setShowLogin] = useState<boolean>(false);
   const [showCart, setShowCart] = useState<boolean>(false);
   const [showSearch, setShowSearch] = useState<boolean>(false);
@@ -25,7 +27,6 @@ const HeaderNav: React.FC<IProps> = (props) => {
   const [messErrLogin, setMessErrLogin] = useState<IMessErrlogin>({});
 
   const { active } = props;
-  console.log("🚀 ~ active:", active);
 
   const handleOnChangeNameLogin = (e: any) => {
     setNameLogin(e.target.value);
@@ -57,6 +58,9 @@ const HeaderNav: React.FC<IProps> = (props) => {
 
   return (
     <div className={cx("wrapper", "grid", "wide")}>
+      <div className={cx("btnNavRes")} onClick={() => setShowNav(true)}>
+        <i className="fa-solid fa-bars"></i>
+      </div>
       <div className={cx("nav")}>
         <Link to={"/"}>
           <div
@@ -133,7 +137,7 @@ const HeaderNav: React.FC<IProps> = (props) => {
         </div>
         <div className={cx("contact__cart")} onClick={() => setShowCart(true)}>
           <i className="fa-solid fa-cart-shopping"></i>
-          <span>0</span>
+          <span>{cartData.length}</span>
         </div>
         <div className={cx("contact__price")}>$ 0.00</div>
         <div
@@ -159,6 +163,82 @@ const HeaderNav: React.FC<IProps> = (props) => {
               onClick={() => setShowSearch(false)}
             >
               <i className="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showNav && (
+        <div className={cx("navRes__wrapper")}>
+          <div
+            className={cx("navRes__overlay")}
+            onClick={() => setShowNav(false)}
+          ></div>
+          <div className={cx("navRes__container")}>
+            <div
+              className={cx("navRes__btnClose")}
+              onClick={() => setShowNav(false)}
+            >
+              <i className="fa-solid fa-xmark"></i>
+            </div>
+            <div className={cx("navRes__contact")}>
+              <i className="fa-regular fa-user"></i>
+              <i className="fa-regular fa-heart"></i>
+              <i
+                className="fa-solid fa-cart-shopping"
+                onClick={() => setShowCart(true)}
+              ></i>
+              <div className={cx("navRes__price")}>$ 0.00</div>
+              <i className="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <div className={cx("navRes__menu")}>
+              <div className={cx("navRes__menuItem")}>
+                <div
+                  className={cx("nav__item")}
+                  onClick={() => setShowNav(false)}
+                >
+                  home
+                </div>
+                <div
+                  className={cx("nav__item")}
+                  onClick={() => setShowNav(false)}
+                >
+                  our product
+                </div>
+                <div
+                  className={cx("nav__item")}
+                  onClick={() => setShowNav(false)}
+                >
+                  about us
+                </div>
+                <div
+                  className={cx("nav__item")}
+                  onClick={() => setShowNav(false)}
+                >
+                  blog
+                </div>
+                <div
+                  className={cx("nav__item")}
+                  onClick={() => setShowNav(false)}
+                >
+                  client center
+                </div>
+                <div
+                  className={cx("nav__item")}
+                  onClick={() => setShowNav(false)}
+                >
+                  faq
+                </div>
+              </div>
+            </div>
+
+            <div className={cx("navRes__subMenu")}>
+              <p>Our stores</p>
+              <span></span>
+              <p>Useful</p>
+              <span></span>
+              <p>info Help</p>
             </div>
           </div>
         </div>

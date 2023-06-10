@@ -3,7 +3,7 @@
 
   .container {
     display: flex;
-    height: 765px;
+    // height: 765px;
   }
 }
 
@@ -141,6 +141,77 @@
     justify-content: center;
     img {
       width: 20%;
+    }
+  }
+}
+/* Tablet - PC with low resolution */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .container {
+    flex-direction: column;
+  }
+  .left {
+    width: 100%;
+
+    .left__percent {
+      font-size: var(--font-size90);
+    }
+
+    .left__sale {
+      font-size: var(--font-size42);
+    }
+    .left__clock {
+      .left__clockItem {
+        p {
+          font-size: var(--font-size24);
+        }
+
+        .left__clockItemNum {
+          font-size: var(--font-size77);
+        }
+      }
+    }
+  }
+  .right {
+    width: 100%;
+
+    .right__headerHighlight {
+      font-size: var(--font-size45);
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .container {
+    flex-direction: column;
+  }
+  .left {
+    width: 100%;
+
+    .left__percent {
+      font-size: var(--font-size77);
+    }
+
+    .left__sale {
+      font-size: var(--font-size32);
+    }
+    .left__clock {
+      .left__clockItem {
+        p {
+          font-size: var(--font-size20);
+        }
+
+        .left__clockItemNum {
+          font-size: var(--font-size55);
+        }
+      }
+    }
+  }
+  .right {
+    width: 100%;
+
+    .right__headerHighlight {
+      font-size: var(--font-size32);
     }
   }
 }

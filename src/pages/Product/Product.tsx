@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import classNames from "classnames/bind";
 import { useLocation } from "react-router-dom";
 
@@ -13,14 +13,31 @@ import Review from "./Review/Review";
 import Related from "./Related/Related";
 import Highlight from "../../components/Highlight/Highlight";
 import Footer from "../../components/Footer/Footer";
+import HeaderFixed from "../../components/Header/HeaderFixed/HeaderFixed";
 
 const cx = classNames.bind(styles);
 const Product: React.FC = () => {
   const location = useLocation();
   const data = location.state.data;
+  const [show, setShow] = useState<boolean>(false);
+  const controlHeader = () => {
+    if (window.scrollY > 200) {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlHeader);
+    return () => {
+      window.removeEventListener("scroll", controlHeader);
+    };
+  }, []);
 
   return (
     <div className={cx("wrapper")}>
+      {show && <HeaderFixed active="ourProduct" />}
       <Header active="ourProduct" />
       <ProductInfo dataProduct={data} />
       <Desc />

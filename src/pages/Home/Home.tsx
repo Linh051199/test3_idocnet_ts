@@ -33,7 +33,7 @@ const Home = () => {
 
   return (
     <div className={cx("home__wrapper")}>
-      {show && <HeaderFixed />}
+      {show && <HeaderFixed active="Home" />}
       <Header active="Home" />
       <Slider />
       <Catalog />

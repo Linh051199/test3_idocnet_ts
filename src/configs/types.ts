@@ -6,6 +6,8 @@ export interface IProductType {
   productPrice: number;
   productPriceSale?: number;
   colorList: IColorType[];
+  height?: number[];
+  age?: string[];
 }
 export interface IColorType {
   name: string;

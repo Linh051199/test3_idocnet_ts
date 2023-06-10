@@ -85,9 +85,6 @@ const Slider = () => {
                 <a href="#">
                   <span>4- 6</span>
                 </a>
-                {/* <div className={cx("sub__topAgeItem")}>0 - 2</div>
-                <div className={cx("sub__topAgeItem")}>2 - 4</div>
-                <div className={cx("sub__topAgeItem")}>4 - 6</div> */}
               </div>
             </div>
             <div className={cx("sub__bottom")}>
@@ -103,6 +100,7 @@ const Slider = () => {
             </div>
           </div>
         </div>
+
         <div className={cx("navList")}>
           <div className={cx("navList__item")}>
             <a href="">

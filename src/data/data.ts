@@ -20,6 +20,8 @@ export const productData: IProductType[] = [
   {
     id: 2,
     productName: "Baby Set Hello Cutie",
+    height: [50, 54, 58, 62, 68],
+    age: ["0-2", "2-4"],
     productImage:
       "https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-product11c-500x625.webp",
     productImageBack:
@@ -50,6 +52,8 @@ export const productData: IProductType[] = [
   {
     id: 4,
     productName: "Baby Set Hello Cutie",
+    height: [50, 54, 58, 62, 68],
+    age: ["0-2", "2-4"],
     productImage:
       "https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-product11c-500x625.webp",
     productImageBack:
@@ -80,6 +84,8 @@ export const productData: IProductType[] = [
   {
     id: 6,
     productName: "Baby Set Hello Cutie",
+    height: [50, 54, 58, 62, 68],
+    age: ["0-2", "2-4"],
     productImage:
       "https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-product11c-500x625.webp",
     productImageBack:
@@ -110,6 +116,8 @@ export const productData: IProductType[] = [
   {
     id: 8,
     productName: "Baby Set Hello Cutie",
+    height: [50, 54, 58, 62, 68],
+    age: ["0-2", "2-4"],
     productImage:
       "https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-product11c-500x625.webp",
     productImageBack:
@@ -143,6 +151,8 @@ export const bestSellerData: IProductType[] = [
   {
     id: 2,
     productName: "Baby Set Hello Cutie",
+    height: [50, 54, 58, 62, 68],
+    age: ["0-2", "2-4"],
     productImage:
       "https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-product11c-500x625.webp",
     productImageBack:
@@ -170,6 +180,25 @@ export const bestSellerData: IProductType[] = [
       { name: "Yellow", code: "#edc582" },
     ],
   },
+  {
+    id: 4,
+    productName: "Baby Set Hello Cutie",
+    height: [50, 54, 58, 62, 68],
+    age: ["0-2", "2-4"],
+    productImage:
+      "https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-product11c-500x625.webp",
+    productImageBack:
+      "https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-product11b-500x625.webp",
+    productPrice: 35.0,
+    colorList: [
+      { name: "Red", code: "#bc2a32" },
+      { name: "Purple", code: "#5a3652" },
+      { name: "Yellow", code: "#edc582" },
+    ],
+  },
+];
+
+export const cartData: IProductType[] = [
   {
     id: 4,
     productName: "Baby Set Hello Cutie",

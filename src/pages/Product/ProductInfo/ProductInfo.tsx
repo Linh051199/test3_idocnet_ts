@@ -16,6 +16,7 @@ const ProductInfo: React.FC<IProp> = (props) => {
 
   const [quantity, setQuantity] = useState(1);
   const [currColor, setCurrColor] = useState("");
+  const [currHeight, setCurrHeight] = useState<number>();
   const [currImg, setCurrImg] = useState(1);
 
   const handleDecreaseQuantity = () => {
@@ -77,6 +78,41 @@ const ProductInfo: React.FC<IProp> = (props) => {
                 ${dataProduct.productPrice.toFixed(2)}
               </div>
             </div>
+
+            {dataProduct.height && (
+              <div className={cx("height")}>
+                <p>Height</p>
+                <div className={cx("heightList")}>
+                  {dataProduct.height?.map((item, index) => (
+                    <div
+                      key={index}
+                      className={
+                        currHeight === index
+                          ? cx("heightItem", "heightActive")
+                          : cx("heightItem")
+                      }
+                      onClick={() => setCurrHeight(index)}
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {dataProduct.age && (
+              <div className={cx("age")}>
+                <p>Age</p>
+                <select name="" id="">
+                  <option value="">Choose an option</option>
+                  {dataProduct.age?.map((item, index) => (
+                    <option key={index} value="">
+                      {item} years
+                    </option>
+                  ))}
+                </select>
+              </div>
+            )}
 
             <div className={cx("colorList")}>
               <p>Color</p>

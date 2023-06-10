@@ -26,7 +26,7 @@
   flex-direction: column;
 
   position: fixed;
-  z-index: 100;
+  z-index: 102;
   top: 0;
   bottom: 0;
   right: 0;
@@ -75,6 +75,13 @@
     }
   }
 
+  .body {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
   .footer {
     display: flex;
     flex-direction: column;
@@ -117,4 +124,10 @@
       opacity: 1;
     }
   }
+}
+
+.cartItem__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
 }
