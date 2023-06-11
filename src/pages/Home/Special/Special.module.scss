@@ -52,13 +52,13 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding-top: 70px;
 
     .left__clockItem {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding-top: 70px;
       width: 30%;
 
       p {
@@ -157,6 +157,8 @@
     }
 
     .left__sale {
+      top: 340px !important;
+
       font-size: var(--font-size42);
     }
     .left__clock {
@@ -194,11 +196,18 @@
 
     .left__sale {
       font-size: var(--font-size32);
+      top: 330px !important;
     }
+
     .left__clock {
+      flex-direction: column;
+
       .left__clockItem {
+        width: 100%;
+        // padding-top: 20px !important;
         p {
           font-size: var(--font-size20);
+          margin-top: 0 !important;
         }
 
         .left__clockItemNum {

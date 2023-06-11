@@ -15,9 +15,8 @@ const Catalog = () => {
           <img src={images.line} alt="img" />
 
           <p>
-            Welcome in our child's world.
-            <br /> All our products are made
-            <br /> from generations with passion.
+            Welcome in our child's world. <br /> All our products are made from
+            generations with passion.
           </p>
 
           <h2>

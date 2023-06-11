@@ -11,6 +11,7 @@ import Benefits from "./Benefits/Benefits";
 import BestSeller from "./BestSeller/BestSeller";
 import Highlight from "../../components/Highlight/Highlight";
 import HeaderFixed from "../../components/Header/HeaderFixed/HeaderFixed";
+import Help from "../../components/Help/Help";
 
 const cx = classNames.bind(styles);
 
@@ -41,6 +42,7 @@ const Home = () => {
       <Benefits />
       <BestSeller />
       <Highlight />
+      <Help />
       <Footer />
     </div>
   );

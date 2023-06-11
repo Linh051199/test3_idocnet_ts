@@ -37,7 +37,7 @@
     width: 100%;
     height: 108px;
     background-color: #111;
-    margin-top: 50px;
+    margin: 50px 0;
 
     p {
       display: flex;
@@ -55,6 +55,44 @@
     &:hover {
       cursor: pointer;
       background-color: #d6b67b;
+    }
+  }
+}
+
+/* Tablet - PC with low resolution */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .body {
+    h2 {
+      font-size: var(--font-size24);
+    }
+
+    .itemList {
+      flex-wrap: wrap;
+      .item {
+        width: 48%;
+      }
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .image {
+    img {
+      width: 30% !important;
+    }
+  }
+  .body {
+    h2 {
+      font-size: var(--font-size24);
+    }
+
+    .itemList {
+      flex-wrap: wrap;
+      .item {
+        width: 100%;
+        margin-bottom: 20px;
+      }
     }
   }
 }

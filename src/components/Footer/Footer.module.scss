@@ -5,3 +5,11 @@
   background-color: #f6f7f9;
   width: 100%;
 }
+
+/* Mobile */
+@media (max-width: 739px) {
+  .wrapper {
+    position: relative;
+    z-index: 0;
+  }
+}

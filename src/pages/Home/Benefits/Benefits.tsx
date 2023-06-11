@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 const Benefits = () => {
   return (
     <div className={cx("wrapper", "grid")}>
-      <div className={cx("container", "grid", "wide")}>
+      <div className={cx("container", "grid", "wider")}>
         <div className={cx("header")}>
           <p>
             What are benefits of <br /> choosing us?
@@ -43,12 +43,14 @@ const Benefits = () => {
               </span>
             </div>
           </div>
+
           <div className={cx("center")}>
             <img
               src="https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-features-pic1.webp"
               alt="img"
             />
           </div>
+
           <div className={cx("info")}>
             <div className={cx("item")}>
               <img
@@ -63,7 +65,7 @@ const Benefits = () => {
             <img className={cx("separate")} src={images.line} alt="img" />
             <div className={cx("item")}>
               <img
-                src="https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-blog-pic1.webp"
+                src="https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-features-icon4.png"
                 alt="img"
               />
               <p>MOISTURE CONTROL</p>
@@ -75,101 +77,6 @@ const Benefits = () => {
         </div>
 
         <button> see all fearures</button>
-
-        {/* <div className={cx("blogpost-wrapper")}>
-          <div className={cx("row")}>
-            <div className={cx("blog-post")}>
-              <div className={cx("photo-wrapper")}>
-                <img
-                  src="https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-blog-pic1.webp"
-                  alt=""
-                />
-              </div>
-              <div className={cx("desc-wrapper")}>
-                <div className={cx("desc")}>
-                  <div className={cx("post-meta")}>
-                    <span className={cx("author me-1")}>
-                      <i className="fa-solid fa-user me-1"></i>
-                      <a href="#">Muffin group</a>
-                    </span>
-                    <span className={cx("date")}>
-                      <span className={cx("label me-1")}>on</span>
-                      <i className="fa-solid fa-clock me-1"></i>
-                      <span className={cx("post-date")}>October 11, 2021</span>
-                    </span>
-                  </div>
-                  <div className={cx("post-title")}>
-                    <h3>
-                      <a href="">Tempor diam pede cursus vitae</a>
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={cx("col-4 p-0")}>
-              <div className={cx("blog-post")}>
-                <div className={cx("photo-wrapper")}>
-                  <img
-                    src="https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-blog-pic2.webp"
-                    alt=""
-                  />
-                </div>
-                <div className={cx("desc-wrapper")}>
-                  <div className={cx("desc")}>
-                    <div className={cx("post-meta")}>
-                      <span className={cx("author"," me-1")}>
-                        <i className="fa-solid fa-user me-1"></i>
-                        <a href="#">Muffin group</a>
-                      </span>
-                      <span className={cx("date")}>
-                        <span className={cx("label me-1")}>on</span>
-                        <i className="fa-solid fa-clock me-1"></i>
-                        <span className={cx("label me-1")}>
-                          October 11, 2021
-                        </span>
-                      </span>
-                    </div>
-                    <div className={cx("post-title")}>
-                      <h3>
-                        <a href="">Tempor diam pede cursus vitae</a>
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className={cx("blog-post")}>
-                <div className={cx("photo-wrapper")}>
-                  <img
-                    src="https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-blog-pic3.webp"
-                    alt=""
-                  />
-                </div>
-                <div className={cx("desc-wrapper")}>
-                  <div className={cx("desc")}>
-                    <div className={cx("post-meta")}>
-                      <span className={cx("author me-1")}>
-                        <i className="fa-solid fa-user me-1"></i>
-                        <a href="#">Muffin group</a>
-                      </span>
-                      <span className={cx("date")}>
-                        <span className={cx("label me-1")}>on</span>
-                        <i className="fa-solid fa-clock me-1"></i>
-                        <span className={cx("post-date")}>
-                          October 11, 2021
-                        </span>
-                      </span>
-                    </div>
-                    <div className={cx("post-title")}>
-                      <h3>
-                        <a href="">Tempor diam pede cursus vitae</a>
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
 
         <div className={cx("board")}>
           <div className={cx("board__left")}>
@@ -189,26 +96,6 @@ const Benefits = () => {
                 Tempor diam pede cursus vitae
               </div>
             </div>
-            {/* <div className={cx("desc-wrapper")}>
-              <div className={cx("desc")}>
-                <div className={cx("post-meta")}>
-                  <span className={cx("author")}>
-                    <i className="fa-solid fa-user me-1"></i>
-                    <a href="#">Muffin group</a>
-                  </span>
-                  <span className={cx("date")}>
-                    <span className={cx("label")}>on</span>
-                    <i className="fa-solid fa-clock me-1"></i>
-                    <span className={cx("post-date")}>October 11, 2021</span>
-                  </span>
-                </div>
-                <div className={cx("post-date")}>
-                  <h3>
-                    <a href="">Tempor diam pede cursus vitae</a>
-                  </h3>
-                </div>
-              </div>
-            </div> */}
           </div>
           <div className={cx("board__right")}>
             <div className={cx("board__rightTop")}>

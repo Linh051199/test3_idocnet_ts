@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import classNames from "classnames/bind";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css"; // optional
@@ -15,22 +15,44 @@ interface IProps {
 const ProductItem: React.FC<IProps> = (props) => {
   const { data } = props;
 
+  const [heart, setHeart] = useState(true);
+  const [modal, setModal] = useState(false);
+
   return (
-    <Link to={"/product"} state={props}>
-      <div className={cx("wrapper")}>
-        <div className={cx("image")}>
+    <div className={cx("wrapper")}>
+      <div className={cx("image")}>
+        <Link to={"/product"} state={props}>
           <img className={cx("image")} src={data.productImage} alt="img" />
           <img
             className={cx("imageBack")}
             src={data.productImageBack}
             alt="img"
           />
-          <div className={cx("subs")}>
+        </Link>
+        <div className={cx("subs")}>
+          <Link to={"/product"} state={props}>
             <i className="fa-solid fa-link"></i>
-            <i className="fa-regular fa-heart"></i>
-            <i className="fa-solid fa-maximize"></i>
-          </div>
+          </Link>
+          {heart ? (
+            <i
+              className="fa-regular fa-heart"
+              onClick={() => setHeart(!heart)}
+            ></i>
+          ) : (
+            <i
+              className={cx("fa-solid fa-heart", "heartActive")}
+              style={{ color: "#111" }}
+              onClick={() => setHeart(!heart)}
+            ></i>
+          )}
+
+          <i
+            className="fa-solid fa-maximize"
+            onClick={() => setModal(true)}
+          ></i>
         </div>
+      </div>
+      <div className={cx("info")}>
         <div className={cx("name")}>{data.productName}</div>
         <div className={cx("colorList")}>
           {data.colorList.map((color: IColorType, index) => (
@@ -49,7 +71,29 @@ const ProductItem: React.FC<IProps> = (props) => {
           </p>
         </div>
       </div>
-    </Link>
+      {modal && (
+        <div className={cx("modal__wrapper")}>
+          <div
+            className={cx("modal__overlay")}
+            onClick={() => setModal(false)}
+          ></div>
+          <div className={cx("modal__container")}>
+            <div className={cx("modal__carousel")}>
+              <img src={data.productImage} alt="img" />
+            </div>
+            <div className={cx("modal__info")}>
+              <div className={cx("header")}>
+                <h1>Duvet Cover Set Pumpkin Bear</h1>
+                <p>
+                  Lorem ipsum dolor sit amet enim. Etiam ullamcorper. <br />
+                  Suspendisse a non felis eleifend justo vel bibendum sapien.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 

@@ -1,4 +1,4 @@
-import { IProductType } from "../configs/types";
+import { ICartType, IProductType } from "../configs/types";
 
 export const productData: IProductType[] = [
   {
@@ -198,19 +198,21 @@ export const bestSellerData: IProductType[] = [
   },
 ];
 
-export const cartData: IProductType[] = [
-  {
-    id: 4,
-    productName: "Baby Set Hello Cutie",
-    productImage:
-      "https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-product11c-500x625.webp",
-    productImageBack:
-      "https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-product11b-500x625.webp",
-    productPrice: 35.0,
-    colorList: [
-      { name: "Red", code: "#bc2a32" },
-      { name: "Purple", code: "#5a3652" },
-      { name: "Yellow", code: "#edc582" },
-    ],
-  },
+export const cartData: ICartType[] = [
+  // {
+  //   id: 4,
+  //   productName: "Baby Set Hello Cutie",
+  //   productImage:
+  //     "https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-product11c-500x625.webp",
+  //   productImageBack:
+  //     "https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-product11b-500x625.webp",
+  //   productPrice: 35.0,
+  //   colorList: [
+  //     { name: "Red", code: "#bc2a32" },
+  //     { name: "Purple", code: "#5a3652" },
+  //     { name: "Yellow", code: "#edc582" },
+  //   ],
+  //   currQuantity: 1,
+  //   currColor: "yellow",
+  // },
 ];

@@ -92,3 +92,41 @@
     }
   }
 }
+
+/* Mobile */
+@media (max-width: 739px) {
+  .header {
+    h2 {
+      font-size: var(--font-size42) !important;
+    }
+
+    p {
+      font-size: var(--font-size12) !important;
+    }
+  }
+  .body {
+    flex-direction: column !important;
+    .item {
+      width: 100% !important;
+      margin-bottom: 20px;
+      .itemHeader {
+        p {
+          font-size: var(--font-size18) !important;
+        }
+
+        h2 {
+          font-size: var(--font-size20) !important;
+        }
+
+        span {
+          font-size: var(--font-size12) !important;
+        }
+      }
+      .itemBody {
+        .item {
+          font-size: var(--font-size13) !important;
+        }
+      }
+    }
+  }
+}

@@ -61,3 +61,17 @@
     }
   }
 }
+
+/* Mobile */
+@media (max-width: 739px) {
+  .imageLine {
+    img {
+      width: 30% !important;
+    }
+  }
+  .body {
+    h2 {
+      font-size: var(--font-size20) !important;
+    }
+  }
+}

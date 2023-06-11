@@ -1,7 +1,5 @@
 .wrapper {
   background-color: #fcfcfc;
-  width: 100%;
-  height: 1060px;
 }
 .body {
   display: flex;
@@ -306,21 +304,24 @@
     position: -webkit-sticky;
     top: 60px;
     max-height: 63vh;
+    // height: 100%;
 
     flex: 1;
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
+    // margin-left: 20px;
 
     .listImage {
+      width: 30%;
       display: flex;
       flex-direction: column;
       height: 100%;
-      align-items: center;
+      align-items: flex-end;
       justify-content: center;
       img {
-        height: 93px;
-        width: 93px;
+        // height: 100%;
+        width: 50%;
 
         &:hover {
           cursor: pointer;
@@ -329,6 +330,131 @@
       }
     }
     .image {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+/* Tablet - PC with low resolution */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .body {
+    flex-direction: column !important;
+    .productInfo {
+      width: 100%;
+      .header {
+        h1 {
+          font-size: var(--font-size45);
+        }
+        p {
+          font-size: var(--font-size18);
+        }
+      }
+      .list {
+        ul {
+          font-size: var(--font-size14);
+        }
+      }
+      .madeOf {
+        font-size: var(--font-size14);
+      }
+      .sizeChart {
+        i {
+          font-size: var(--font-size18);
+          margin-right: 10px;
+        }
+
+        p {
+          font-size: var(--font-size14);
+          margin-bottom: 0;
+        }
+      }
+
+      .price {
+        .priceHidden {
+          font-size: var(--font-size28);
+        }
+
+        .priceShow {
+          font-size: var(--font-size38);
+        }
+      }
+
+      .contact {
+        .quantity {
+          font-size: var(--font-size18);
+        }
+      }
+    }
+    .productImage {
+      width: 100% !important;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .body {
+    flex-direction: column !important;
+    .productInfo {
+      width: 100% !important;
+      .header {
+        h1 {
+          font-size: var(--font-size24);
+        }
+        p {
+          font-size: var(--font-size12);
+        }
+      }
+      .list {
+        ul {
+          font-size: var(--font-size12);
+        }
+      }
+      .madeOf {
+        font-size: var(--font-size12);
+      }
+      .sizeChart {
+        i {
+          font-size: var(--font-size14);
+          margin-right: 10px;
+        }
+
+        p {
+          font-size: var(--font-size12);
+          margin-bottom: 0;
+        }
+      }
+
+      .price {
+        .priceHidden {
+          font-size: var(--font-size24);
+        }
+
+        .priceShow {
+          font-size: var(--font-size32);
+        }
+      }
+
+      .contact {
+        .quantity {
+          font-size: var(--font-size14);
+        }
+      }
+
+      .tag__list {
+        p {
+          font-size: var(--font-size14) !important;
+        }
+      }
+    }
+    .productImage {
+      width: 100% !important;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
     }
   }
 }

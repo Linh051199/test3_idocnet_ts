@@ -49,16 +49,6 @@
     }
 
     .subs {
-      // position: absolute;
-      // z-index: 99;
-      // bottom: 0;
-
-      // display: none;
-      // justify-content: space-around;
-      // align-items: center;
-      // width: 100%;
-      // height: 60px;
-      // background-color: #fff;
       position: absolute;
       width: 100%;
       left: 0;
@@ -71,24 +61,54 @@
       z-index: 4;
 
       i {
-        // font-size: var(--font-size20);
-        // color: var(--text-color-black);
-
-        // &:hover {
-        //   color: #ebc989;
-        // }
         color: #000;
-        font-size: 20px;
-        cursor: pointer;
+        font-size: var(--font-size20);
+
+        &:hover {
+          color: #ebc989;
+          cursor: pointer;
+        }
+      }
+    }
+    .heartActive {
+      animation: showHeartActive 0.3s linear;
+
+      &:hover {
+        color: #ebc989 !important;
+      }
+    }
+    @keyframes showHeartActive {
+      0% {
+        transform: scale(0.5);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+      100% {
+        transform: scale(1);
       }
     }
   }
 
+  .info {
+    position: relative;
+    z-index: 99;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .name {
     position: relative;
+    width: 100%;
     z-index: 99;
     display: flex;
     align-items: start;
+    justify-content: center;
     font-size: var(--font-size20);
     text-align: center;
     margin: 20px 0 10px 0;
@@ -99,8 +119,11 @@
   }
 
   .colorList {
+    position: relative;
+    z-index: 99;
     display: flex;
     margin-bottom: 10px;
+    background-color: #fff;
 
     .colorItem {
       width: 20px;
@@ -130,6 +153,80 @@
 
     .activePrice {
       font-weight: var(--font-weight-medium);
+    }
+  }
+}
+
+.modal__wrapper {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modal__overlay {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal__container {
+    position: fixed;
+    z-index: 101;
+    top: 50%;
+    // right: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    background-color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .modal__carousel {
+      img {
+        width: 500px;
+        height: auto;
+      }
+    }
+
+    .modal__info {
+    }
+  }
+}
+
+/* Tablet - PC with low resolution */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .name {
+    font-size: var(--font-size18) !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .name {
+    font-size: var(--font-size12) !important;
+  }
+  .subs {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -60px;
+    display: flex;
+    background-color: #fff;
+    padding: 10px !important;
+    justify-content: space-around;
+    transition: all 0.3s ease-in-out;
+    z-index: 4;
+
+    i {
+      color: #000;
+      font-size: var(--font-size14) !important;
+      cursor: pointer;
     }
   }
 }

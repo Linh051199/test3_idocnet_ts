@@ -5,13 +5,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 70px 0;
 
     .item {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 25%;
+      padding-bottom: 30px;
 
       img {
         width: 42px;
@@ -23,6 +23,28 @@
         font-size: var(--font-size14);
         font-weight: var(--font-weight-semiBold);
       }
+    }
+  }
+}
+
+/* Tablet - PC with low resolution */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .container {
+    flex-wrap: wrap;
+
+    .item {
+      width: 50% !important;
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .container {
+    flex-wrap: wrap;
+
+    .item {
+      width: 100% !important;
     }
   }
 }

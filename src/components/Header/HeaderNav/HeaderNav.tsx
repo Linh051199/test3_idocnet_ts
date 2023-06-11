@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import classNames from "classnames/bind";
 import isEmpty from "validator/lib/isEmpty";
 import { Link } from "react-router-dom";
@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import styles from "./HeaderNav.module.scss";
 import Cart from "./Cart/Cart";
 import { cartData } from "../../../data/data";
+import { CartContext } from "../../../context/CartContext";
 
 const cx = classNames.bind(styles);
 
@@ -27,6 +28,8 @@ const HeaderNav: React.FC<IProps> = (props) => {
   const [messErrLogin, setMessErrLogin] = useState<IMessErrlogin>({});
 
   const { active } = props;
+  const [state, dispatch] = useContext(CartContext);
+  const { cartList } = state;
 
   const handleOnChangeNameLogin = (e: any) => {
     setNameLogin(e.target.value);
@@ -137,7 +140,7 @@ const HeaderNav: React.FC<IProps> = (props) => {
         </div>
         <div className={cx("contact__cart")} onClick={() => setShowCart(true)}>
           <i className="fa-solid fa-cart-shopping"></i>
-          <span>{cartData.length}</span>
+          <span>{cartList.length}</span>
         </div>
         <div className={cx("contact__price")}>$ 0.00</div>
         <div

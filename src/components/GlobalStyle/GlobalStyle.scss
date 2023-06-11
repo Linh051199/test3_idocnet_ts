@@ -77,6 +77,11 @@ p {
   margin: 0 auto;
 }
 
+.grid.wider {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /* PC with low resolution */
 @media (min-width: 1024px) and (max-width: 1270px) {
   // .grid.wide {
@@ -85,13 +90,20 @@ p {
   .wide {
     width: 984px;
   }
+  .wider {
+    width: 984px;
+  }
 }
 
 /* Tablet - PC with low resolution */
 @media (min-width: 740px) and (max-width: 1023px) {
   .grid.wide {
     width: 100%;
-    padding: 0 30px;
+    padding: 0 40px;
+  }
+  .grid.wider {
+    width: 100%;
+    padding: 0 40px;
   }
 }
 
@@ -99,6 +111,10 @@ p {
 @media (max-width: 739px) {
   .wide {
     width: 100%;
-    padding: 0 20px;
+    padding: 0 30px;
+  }
+  .wider {
+    width: 100%;
+    padding: 0 30px;
   }
 }

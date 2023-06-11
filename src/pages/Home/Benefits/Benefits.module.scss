@@ -102,7 +102,6 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
-      height: 458px;
       margin: 120px 0;
 
       .board__left {
@@ -341,12 +340,112 @@
       font-size: var(--font-size16) !important;
     }
   }
+  .board__left {
+    .content {
+      .content__header {
+        font-size: var(--font-size14) !important;
+      }
+      .content__footer {
+        font-size: var(--font-size26) !important;
+        font-family: "Bodoni Moda", serif;
+      }
+    }
+  }
+  .board__rightTop {
+    .content {
+      .content__header {
+        font-size: var(--font-size10) !important;
+      }
+      .content__footer {
+        font-size: var(--font-size18) !important;
+        font-family: "Bodoni Moda", serif;
+      }
+    }
+  }
+  .board__rightBottom {
+    .content {
+      .content__header {
+        font-size: var(--font-size10) !important;
+      }
+      .content__footer {
+        font-size: var(--font-size18) !important;
+        font-family: "Bodoni Moda", serif;
+      }
+    }
+  }
 }
 
 /* Mobile */
 @media (max-width: 739px) {
-  .wide {
-    width: 100%;
-    padding: 0 20px;
+  .header {
+    p {
+      font-size: var(--font-size38) !important;
+    }
+    span {
+      font-size: var(--font-size12) !important;
+    }
+  }
+  .body {
+    flex-direction: column;
+
+    .info {
+      width: 100% !important;
+
+      .separate {
+        width: 30% !important;
+      }
+    }
+  }
+  .board {
+    flex-direction: column;
+    .board__left {
+      width: 100% !important;
+      .content {
+        .content__header {
+          font-size: var(--font-size10) !important;
+        }
+        .content__footer {
+          font-size: var(--font-size18) !important;
+          font-family: "Bodoni Moda", serif;
+        }
+      }
+      &:hover::after {
+        width: 50px !important;
+        transition: width linear 0.2s;
+      }
+    }
+    .board__right {
+      width: 100% !important;
+      .board__rightTop {
+        .content {
+          .content__header {
+            font-size: var(--font-size10) !important;
+          }
+          .content__footer {
+            font-size: var(--font-size18) !important;
+            font-family: "Bodoni Moda", serif;
+          }
+        }
+        &:hover::after {
+          width: 50px !important;
+          transition: width linear 0.2s;
+        }
+      }
+      .board__rightBottom {
+        .content {
+          .content__header {
+            font-size: var(--font-size10) !important;
+          }
+          .content__footer {
+            font-size: var(--font-size18) !important;
+            font-family: "Bodoni Moda", serif;
+          }
+        }
+        &:hover::after {
+          width: 50px !important;
+          transition: width linear 0.2s;
+        }
+      }
+    }
   }
 }

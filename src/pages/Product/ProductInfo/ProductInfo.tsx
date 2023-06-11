@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import classNames from "classnames/bind";
 
 import styles from "./ProductInfo.module.scss";
 import { IColorType, IProductType } from "../../../configs/types";
 import Tippy from "@tippyjs/react";
+import { CartContext } from "../../../context/CartContext";
+import { actions } from "../../../context";
 
 const cx = classNames.bind(styles);
 
@@ -19,6 +21,15 @@ const ProductInfo: React.FC<IProp> = (props) => {
   const [currHeight, setCurrHeight] = useState<number>();
   const [currImg, setCurrImg] = useState(1);
 
+  const [state, dispatch] = useContext(CartContext);
+  const { cartList } = state;
+
+  const cartProduct = {
+    ...dataProduct,
+    currQuantity: quantity,
+    currColor: currColor,
+  };
+
   const handleDecreaseQuantity = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
@@ -29,15 +40,17 @@ const ProductInfo: React.FC<IProp> = (props) => {
     setQuantity(quantity + 1);
   };
 
+  const handleAddCart = () => {
+    dispatch(actions.addCart(cartProduct));
+  };
+
   return (
     <div className={cx("wrapper", "grid")}>
       <div className={cx("container", "grid", "wide")}>
         <div className={cx("body")}>
           <div className={cx("productInfo")}>
             <div className={cx("header")}>
-              <h1>
-                Duvet Cover Set <br /> Pumpkin Bear
-              </h1>
+              <h1>Duvet Cover Set Pumpkin Bear</h1>
               <p>
                 Lorem ipsum dolor sit amet enim. Etiam ullamcorper. <br />
                 Suspendisse a non felis eleifend justo vel bibendum sapien.
@@ -87,11 +100,11 @@ const ProductInfo: React.FC<IProp> = (props) => {
                     <div
                       key={index}
                       className={
-                        currHeight === index
+                        currHeight === item
                           ? cx("heightItem", "heightActive")
                           : cx("heightItem")
                       }
-                      onClick={() => setCurrHeight(index)}
+                      onClick={() => setCurrHeight(item)}
                     >
                       {item}
                     </div>
@@ -143,7 +156,7 @@ const ProductInfo: React.FC<IProp> = (props) => {
                   onClick={handleIncreaseQuantity}
                 ></i>
               </div>
-              <button> Add to cart</button>
+              <button onClick={handleAddCart}> Add to cart</button>
             </div>
 
             <div className={cx("desc")}>
