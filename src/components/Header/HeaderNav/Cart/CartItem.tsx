@@ -28,22 +28,17 @@ const CartItem: React.FC<IProps> = (props) => {
   const getSubtotal = (number: any, price: number) => {
     return (number * price).toFixed(2);
   };
-  console.log("quantity", currQuantity);
-  const newCartIncrease = { ...data, currQuantity: currQuantity + 1 };
-  const newCartDecrease = { ...data, currQuantity: currQuantity - 1 };
 
   const handleOnClickDecrease = () => {
     if (currQuantity > 1) {
       setCurrentQuantity(currQuantity - 1);
     }
-    // dispatch(actions.updateCart(newCartDecrease));
     dispatch(actions.decreaseQuantity(data));
   };
 
   const handleOnClickIncrease = () => {
     setCurrentQuantity(currQuantity + 1);
 
-    // dispatch(actions.updateCart(newCartIncrease));
     dispatch(actions.increaseQuantity(data));
   };
   return (

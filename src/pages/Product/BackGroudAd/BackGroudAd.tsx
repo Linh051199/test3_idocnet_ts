@@ -15,26 +15,21 @@ const BackGroudAd = () => {
           />
           <p>BIBENDUM NETUS</p>
 
-          <h1>
-            Vestibulum <br /> bibendum <br /> nulla <br /> torquent <br />
-            semper
-          </h1>
+          <h1>Vestibulum bibendum nulla torquent semper</h1>
 
           <span>
-            Tristique nisi rutrum porta magna pharetra <br /> aenean proin
-            rutrum nostra eu <br /> curabitur consequat dolor molestie <br />{" "}
-            auctor porta et lacus porta fusce <br /> vulputate non dui quis.
+            Tristique nisi rutrum porta magna pharetra aenean proin rutrum
+            nostra eu curabitur consequat dolor molestie auctor porta et lacus
+            porta fusce vulputate non dui quis.
           </span>
         </div>
         <div className={cx("right")}>
           <h4>PHASELLUS TORTOR</h4>
-          <h1>
-            Ultricies <br /> porta <br /> urna <br /> laoreet <br /> enim
-          </h1>
+          <h1>Ultricies porta urna laoreet enim</h1>
           <span>
-            Inceptos aliquam lectus nullam eget mi <br /> sapien luctus praesent
-            habitant porttitor <br /> tempor proin tempor gravida massa at{" "}
-            <br /> lectus nam praesent sociosqu aenean <br /> quis.
+            Inceptos aliquam lectus nullam eget mi sapien luctus praesent
+            habitant porttitor tempor proin tempor gravida massa at lectus nam
+            praesent sociosqu aenean quis.
           </span>
 
           <div className={cx("starList")}>

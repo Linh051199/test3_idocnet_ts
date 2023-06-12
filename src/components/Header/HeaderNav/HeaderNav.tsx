@@ -159,7 +159,9 @@ const HeaderNav: React.FC<IProps> = (props) => {
           <i className="fa-solid fa-cart-shopping"></i>
           <span>{totalCart}</span>
         </div>
-        <div className={cx("contact__price")}>${total.toFixed(2)}</div>
+        <div className={cx("contact__price")} onClick={() => setShowCart(true)}>
+          ${total.toFixed(2)}{" "}
+        </div>
         <div
           className={cx("contact__search")}
           onClick={() => setShowSearch(true)}
@@ -203,12 +205,22 @@ const HeaderNav: React.FC<IProps> = (props) => {
             </div>
             <div className={cx("navRes__contact")}>
               <i className="fa-regular fa-user"></i>
-              <i className="fa-regular fa-heart"></i>
-              <i
-                className="fa-solid fa-cart-shopping"
+              <div>
+                <i className="fa-regular fa-heart"></i> <span>{wishlish}</span>
+              </div>
+              <div>
+                <i
+                  className="fa-solid fa-cart-shopping"
+                  onClick={() => setShowCart(true)}
+                ></i>
+                <span>{totalCart}</span>
+              </div>
+              <div
+                className={cx("navRes__price")}
                 onClick={() => setShowCart(true)}
-              ></i>
-              <div className={cx("navRes__price")}>${total.toFixed(2)}</div>
+              >
+                ${total.toFixed(2)}
+              </div>
               <i className="fa-solid fa-magnifying-glass"></i>
             </div>
 

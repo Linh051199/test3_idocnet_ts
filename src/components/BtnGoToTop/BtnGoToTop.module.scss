@@ -1,0 +1,15 @@
+.wrapper {
+  position: fixed;
+  z-index: 103;
+  bottom: 0;
+  right: 0;
+
+  font-size: var(--font-size18);
+  margin-bottom: 20px;
+  margin-right: 50px;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}

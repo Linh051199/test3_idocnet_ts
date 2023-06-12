@@ -79,10 +79,16 @@
     }
     @keyframes showHeartActive {
       0% {
+        transform: scale(0.2);
+      }
+      25% {
         transform: scale(0.5);
       }
       50% {
         transform: scale(1.5);
+      }
+      75% {
+        transform: scale(1.25);
       }
       100% {
         transform: scale(1);

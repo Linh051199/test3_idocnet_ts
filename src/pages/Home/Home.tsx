@@ -12,6 +12,8 @@ import BestSeller from "./BestSeller/BestSeller";
 import Highlight from "../../components/Highlight/Highlight";
 import HeaderFixed from "../../components/Header/HeaderFixed/HeaderFixed";
 import Help from "../../components/Help/Help";
+import MenuMobile from "../../components/MenuMobile/MenuMobile";
+import BtnGoToTop from "../../components/BtnGoToTop/BtnGoToTop";
 
 const cx = classNames.bind(styles);
 
@@ -42,8 +44,10 @@ const Home = () => {
       <Benefits />
       <BestSeller />
       <Highlight />
+      <BtnGoToTop />
       <Help />
       <Footer />
+      <MenuMobile />
     </div>
   );
 };

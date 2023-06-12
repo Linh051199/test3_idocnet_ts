@@ -33,7 +33,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 10px;
     margin: 0 10px;
     height: 100%;
     border-bottom: 4px solid transparent;
@@ -348,6 +348,23 @@
       width: 100%;
       margin-top: 70px;
       margin-bottom: 20px;
+      div {
+        position: relative;
+        span {
+          position: absolute;
+          top: -10px;
+          left: 22px;
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          background-color: #eac989;
+          color: var(--text-color-white);
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
 
       i {
         font-size: var(--font-size20);

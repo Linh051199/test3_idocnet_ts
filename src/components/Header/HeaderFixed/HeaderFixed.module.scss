@@ -31,7 +31,7 @@
     align-items: center;
 
     img {
-      width: 100%;
+      width: 80%;
     }
   }
   .btnNavRes {
@@ -182,8 +182,25 @@
 }
 
 @media (min-width: 740px) and (max-width: 1023px) {
-  .wrapper {
+  .container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+
+    .logo {
+      padding: 10px 0;
+      img {
+        width: 60%;
+      }
+    }
+  }
+  .headerNav {
     display: none;
+  }
+  .btnNavRes {
+    display: block !important;
   }
 }
 

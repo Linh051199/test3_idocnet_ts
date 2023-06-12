@@ -14,6 +14,9 @@ import Related from "./Related/Related";
 import Highlight from "../../components/Highlight/Highlight";
 import Footer from "../../components/Footer/Footer";
 import HeaderFixed from "../../components/Header/HeaderFixed/HeaderFixed";
+import MenuMobile from "../../components/MenuMobile/MenuMobile";
+import Help from "../../components/Help/Help";
+import BtnGoToTop from "../../components/BtnGoToTop/BtnGoToTop";
 
 const cx = classNames.bind(styles);
 const Product: React.FC = () => {
@@ -47,7 +50,10 @@ const Product: React.FC = () => {
       <Review />
       <Related />
       <Highlight />
+      <BtnGoToTop />
+      <Help />
       <Footer />
+      <MenuMobile />
     </div>
   );
 };

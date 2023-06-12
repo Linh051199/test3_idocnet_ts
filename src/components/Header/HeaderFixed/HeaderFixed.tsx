@@ -52,8 +52,9 @@ const HeaderFixed: React.FC<IProps> = (props) => {
         <div className={cx("btnNavRes")} onClick={() => setShowNav(true)}>
           <i className="fa-solid fa-bars"></i>
         </div>
-
-        <HeaderNav active={active} />
+        <div className={cx("headerNav")}>
+          <HeaderNav active={active} />
+        </div>
       </div>
       {showCart && <Cart setShowCart={setShowCart} />}
 

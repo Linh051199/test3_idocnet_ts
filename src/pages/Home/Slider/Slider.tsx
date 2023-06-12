@@ -77,13 +77,19 @@ const Slider = () => {
               </div>
               <div className={cx("sub__topAge")}>
                 <a href="#">
-                  <span>0 - 2</span>
+                  <span>
+                    0 <i className="fa-solid fa-minus"></i> 2
+                  </span>
                 </a>
                 <a href="#">
-                  <span>2- 4</span>
+                  <span>
+                    2 <i className="fa-solid fa-minus"></i> 4
+                  </span>
                 </a>
                 <a href="#">
-                  <span>4- 6</span>
+                  <span>
+                    4 <i className="fa-solid fa-minus"></i> 6
+                  </span>
                 </a>
               </div>
             </div>

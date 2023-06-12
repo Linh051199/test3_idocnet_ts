@@ -38,10 +38,26 @@
       .sub__topTitle {
         position: relative;
         p {
+          position: relative;
+          z-index: 1;
           font-family: "Bodoni Moda", serif;
           font-size: var(--font-size30);
           margin-bottom: 20px;
-          background-color: transparent;
+          background-color: rgba(0, 0, 0, 0);
+
+          &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            bottom: 10%;
+            left: 0;
+            width: 100%;
+            height: 7px;
+            margin-left: -5px;
+            background-color: #ebc989;
+          }
+        }
+        span {
         }
       }
 
