@@ -36,14 +36,15 @@ const CartItem: React.FC<IProps> = (props) => {
     if (currQuantity > 1) {
       setCurrentQuantity(currQuantity - 1);
     }
-    dispatch(actions.updateCart(newCartDecrease));
-    // dispatch(actions.decreaseQuantity(data));
+    // dispatch(actions.updateCart(newCartDecrease));
+    dispatch(actions.decreaseQuantity(data));
   };
 
   const handleOnClickIncrease = () => {
     setCurrentQuantity(currQuantity + 1);
 
-    dispatch(actions.updateCart(newCartIncrease));
+    // dispatch(actions.updateCart(newCartIncrease));
+    dispatch(actions.increaseQuantity(data));
   };
   return (
     <div className={cx("cartItem__wrapper")}>

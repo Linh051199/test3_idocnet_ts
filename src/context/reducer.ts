@@ -35,8 +35,6 @@ const reducer = (state: any, action: any) => {
 
       storage.set(cartListLocal);
 
-      const newArrAdd = storage.get();
-
       return {
         ...state,
         cartList: cartListLocal,
@@ -85,9 +83,47 @@ const reducer = (state: any, action: any) => {
         wishlish: currWishListDe,
       };
     case DECREASE__QUANTITY:
-      console.log("payload:", action.payload);
+      let cartListLocal2 = storage.get();
+
+      let currentItem2 = cartListLocal2.find(
+        (item: any) =>
+          item.id === action.payload.id &&
+          item.currColor.toLowerCase() ===
+            action.payload.currColor.toLowerCase()
+      );
+
+      if (currentItem2) {
+        if (currentItem2.currQuantity > 1) {
+          currentItem2.currQuantity--;
+        }
+      }
+
+      storage.set(cartListLocal2);
+
       return {
         ...state,
+        cartList: cartListLocal2,
+      };
+
+    case INCREASE__QUANTITY:
+      let cartListLocal3 = storage.get();
+
+      let currentItem3 = cartListLocal3.find(
+        (item: any) =>
+          item.id === action.payload.id &&
+          item.currColor.toLowerCase() ===
+            action.payload.currColor.toLowerCase()
+      );
+
+      if (currentItem3) {
+        currentItem3.currQuantity++;
+      }
+
+      storage.set(cartListLocal3);
+
+      return {
+        ...state,
+        cartList: cartListLocal3,
       };
     default:
       throw new Error(`Invalid action ${action.type}`);
