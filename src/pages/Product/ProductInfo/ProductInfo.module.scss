@@ -53,11 +53,13 @@
       i {
         font-size: var(--font-size20);
         margin-right: 10px;
+        cursor: pointer;
       }
 
       p {
         font-size: var(--font-size17);
         margin-bottom: 0;
+        cursor: pointer;
       }
     }
 
@@ -201,7 +203,24 @@
         }
       }
 
-      button {
+      .product__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        background-color: #111;
+        opacity: 0.6;
+        font-size: var(--font-size17);
+
+        color: var(--text-color-white);
+        border-radius: 5px;
+        flex: 1;
+
+        &:hover {
+          cursor: no-drop;
+        }
+      }
+      .product__btnActive {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -216,6 +235,7 @@
         font-weight: var(--font-weight-medium);
 
         &:hover {
+          cursor: pointer;
           opacity: 0.9;
         }
       }
@@ -336,6 +356,96 @@
     }
   }
 }
+.sizeChart__modal {
+  position: relative;
+
+  .sizeChart__overlay {
+    position: fixed;
+    z-index: 102;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .sizeChart__container {
+    position: fixed;
+    z-index: 102;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin-top: 150px;
+    background-color: #fff;
+
+    width: 400px;
+    height: 370px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px;
+    .sizeChart__btnClose {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: 20px;
+      margin-right: 30px;
+      cursor: pointer;
+      i {
+        font-size: var(--font-size20);
+      }
+    }
+
+    h4 {
+      width: 100%;
+      text-align: center;
+      font-size: var(--font-size20);
+      font-family: "Bodoni Moda", serif;
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+      border-collapse: collapse;
+      border-spacing: 0;
+      border-radius: 5px;
+
+      thead {
+        text-align: center;
+        font-size: var(--font-size17);
+        font-weight: var(--font-weight-medium);
+        th {
+          border: 1px solid #ddd;
+          padding: 10px;
+          background-color: #f9f9f9;
+        }
+      }
+      tbody {
+        text-align: center;
+        font-size: var(--font-size14);
+
+        tr {
+          &:nth-child(2) {
+            background-color: #f9f9f9;
+          }
+          &:nth-child(4) {
+            background-color: #f9f9f9;
+          }
+        }
+        td {
+          border: 1px solid #ddd;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
 /* Tablet - PC with low resolution */
 @media (min-width: 740px) and (max-width: 1023px) {
   .body {

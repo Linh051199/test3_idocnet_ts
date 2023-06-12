@@ -4,6 +4,8 @@ export const productData: IProductType[] = [
   {
     id: 1,
     productName: "Duvet Cover Set Pumpkin Bear",
+    height: [50, 54, 58, 62, 68],
+    age: ["0-2", "2-4"],
     productImage:
       "https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-product1a-500x625.webp",
     productImageBack:
@@ -36,6 +38,8 @@ export const productData: IProductType[] = [
   {
     id: 3,
     productName: "Duvet Cover Set Pumpkin Bear",
+    height: [50, 54, 58, 62, 68],
+    age: ["0-2", "2-4"],
     productImage:
       "https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-product1a-500x625.webp",
     productImageBack:
@@ -68,6 +72,8 @@ export const productData: IProductType[] = [
   {
     id: 5,
     productName: "Duvet Cover Set Pumpkin Bear",
+    height: [50, 54, 58, 62, 68],
+    age: ["0-2", "2-4"],
     productImage:
       "https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-product1a-500x625.webp",
     productImageBack:
@@ -100,6 +106,8 @@ export const productData: IProductType[] = [
   {
     id: 7,
     productName: "Duvet Cover Set Pumpkin Bear",
+    height: [50, 54, 58, 62, 68],
+    age: ["0-2", "2-4"],
     productImage:
       "https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-product1a-500x625.webp",
     productImageBack:
@@ -135,6 +143,8 @@ export const bestSellerData: IProductType[] = [
   {
     id: 1,
     productName: "Duvet Cover Set Pumpkin Bear",
+    height: [50, 54, 58, 62, 68],
+    age: ["0-2", "2-4"],
     productImage:
       "https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-product1a-500x625.webp",
     productImageBack:
@@ -167,6 +177,8 @@ export const bestSellerData: IProductType[] = [
   {
     id: 3,
     productName: "Duvet Cover Set Pumpkin Bear",
+    height: [50, 54, 58, 62, 68],
+    age: ["0-2", "2-4"],
     productImage:
       "https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-product1a-500x625.webp",
     productImageBack:
@@ -198,21 +210,6 @@ export const bestSellerData: IProductType[] = [
   },
 ];
 
-export const cartData: ICartType[] = [
-  // {
-  //   id: 4,
-  //   productName: "Baby Set Hello Cutie",
-  //   productImage:
-  //     "https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-product11c-500x625.webp",
-  //   productImageBack:
-  //     "https://themes.muffingroup.com/be/babyshop/wp-content/uploads/2021/10/babyshop-product11b-500x625.webp",
-  //   productPrice: 35.0,
-  //   colorList: [
-  //     { name: "Red", code: "#bc2a32" },
-  //     { name: "Purple", code: "#5a3652" },
-  //     { name: "Yellow", code: "#edc582" },
-  //   ],
-  //   currQuantity: 1,
-  //   currColor: "yellow",
-  // },
-];
+export const cartData: ICartType[] = [];
+
+export const wishlistData: number = 0;

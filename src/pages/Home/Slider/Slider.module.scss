@@ -251,7 +251,7 @@
     justify-content: center;
     align-items: center;
     font-family: "Bodoni Moda", serif;
-    animation: ShowContent2 linear 0.2s;
+    animation: showContent linear 0.5s;
 
     .header {
       font-size: var(--font-size42);
@@ -321,7 +321,7 @@
     justify-content: center;
     align-items: center;
     font-family: "Bodoni Moda", serif;
-    animation: ShowContent2 linear 0.2s;
+    animation: showContent linear 0.5s;
 
     .header {
       font-size: var(--font-size42);
@@ -361,16 +361,26 @@
       }
     }
 
-    @keyframes ShowContent2 {
-      from {
-        top: 60%;
-        opacity: 0;
-      }
-      to {
-        top: 30%;
-        opacity: 1;
-      }
-    }
+    // @keyframes ShowContent2 {
+    //   from {
+    //     top: 60%;
+    //     opacity: 0;
+    //   }
+    //   to {
+    //     top: 30%;
+    //     opacity: 1;
+    //   }
+    // }
+  }
+}
+@keyframes showContent {
+  from {
+    bottom: -15%;
+    opacity: 0;
+  }
+  to {
+    bottom: 15%;
+    opacity: 1;
   }
 }
 
@@ -500,11 +510,11 @@
   .slider2__wrapper {
     .content {
       .header {
-        font-size: var(--font-size16);
+        font-size: var(--font-size18);
       }
 
       p {
-        font-size: var(--font-size24);
+        font-size: var(--font-size28);
       }
 
       .slider1Btn {
@@ -521,15 +531,15 @@
     .content {
       .header {
         justify-content: flex-start;
-        font-size: var(--font-size17);
+        font-size: var(--font-size18);
       }
 
       h2 {
-        font-size: var(--font-size17);
+        font-size: var(--font-size18);
       }
 
       p {
-        font-size: var(--font-size24);
+        font-size: var(--font-size28);
       }
 
       .slider1Btn {

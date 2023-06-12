@@ -13,8 +13,11 @@ function App() {
       <ScrollToTop>
         <div className="App">
           <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/product" element={<Product />}></Route>
+            <Route path="/test3_idocnet_ts/" element={<Home />}></Route>
+            <Route
+              path="/test3_idocnet_ts/product"
+              element={<Product />}
+            ></Route>
           </Routes>
         </div>
       </ScrollToTop>

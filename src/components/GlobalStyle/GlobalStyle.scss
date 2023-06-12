@@ -54,7 +54,6 @@ html {
 
 body {
   font-family: "Jost", sans-serif;
-  // font-family: "Bodoni Moda", serif;
   font-size: var(--system-14-font-size);
   line-height: var(--system-14-line-height);
   text-rendering: optimizeSpeed;
@@ -84,9 +83,6 @@ p {
 
 /* PC with low resolution */
 @media (min-width: 1024px) and (max-width: 1270px) {
-  // .grid.wide {
-  //   padding: 0 20px;
-  // }
   .wide {
     width: 984px;
   }

@@ -7,6 +7,7 @@ import styles from "./HeaderNav.module.scss";
 import Cart from "./Cart/Cart";
 import { cartData } from "../../../data/data";
 import { CartContext } from "../../../context/CartContext";
+import { wishlistData } from "../../../data/data";
 
 const cx = classNames.bind(styles);
 
@@ -29,7 +30,23 @@ const HeaderNav: React.FC<IProps> = (props) => {
 
   const { active } = props;
   const [state, dispatch] = useContext(CartContext);
-  const { cartList } = state;
+  const { cartList, wishlish } = state;
+
+  let totalCart = 0;
+
+  if (cartList.length > 0) {
+    for (let cart of cartList) {
+      totalCart += cart.currQuantity;
+    }
+  }
+
+  let total = 0;
+
+  if (cartList.length > 0) {
+    for (let cart of cartList) {
+      total += cart.currQuantity * cart.productPrice;
+    }
+  }
 
   const handleOnChangeNameLogin = (e: any) => {
     setNameLogin(e.target.value);
@@ -65,7 +82,7 @@ const HeaderNav: React.FC<IProps> = (props) => {
         <i className="fa-solid fa-bars"></i>
       </div>
       <div className={cx("nav")}>
-        <Link to={"/"}>
+        <Link to={"/test3_idocnet_ts/"}>
           <div
             className={
               active === "Home" ? cx("nav__item", "active") : cx("nav__item")
@@ -136,13 +153,13 @@ const HeaderNav: React.FC<IProps> = (props) => {
         )}
         <div className={cx("contact__heart")}>
           <i className="fa-regular fa-heart"></i>
-          <span>0</span>
+          <span>{wishlish}</span>
         </div>
         <div className={cx("contact__cart")} onClick={() => setShowCart(true)}>
           <i className="fa-solid fa-cart-shopping"></i>
-          <span>{cartList.length}</span>
+          <span>{totalCart}</span>
         </div>
-        <div className={cx("contact__price")}>$ 0.00</div>
+        <div className={cx("contact__price")}>${total.toFixed(2)}</div>
         <div
           className={cx("contact__search")}
           onClick={() => setShowSearch(true)}
@@ -191,7 +208,7 @@ const HeaderNav: React.FC<IProps> = (props) => {
                 className="fa-solid fa-cart-shopping"
                 onClick={() => setShowCart(true)}
               ></i>
-              <div className={cx("navRes__price")}>$ 0.00</div>
+              <div className={cx("navRes__price")}>${total.toFixed(2)}</div>
               <i className="fa-solid fa-magnifying-glass"></i>
             </div>
 

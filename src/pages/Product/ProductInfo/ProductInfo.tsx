@@ -15,11 +15,13 @@ interface IProp {
 
 const ProductInfo: React.FC<IProp> = (props) => {
   const { dataProduct } = props;
+  const [sizeChart, setSizeChart] = useState(false);
 
   const [quantity, setQuantity] = useState(1);
   const [currColor, setCurrColor] = useState("");
-  const [currHeight, setCurrHeight] = useState<number>();
   const [currImg, setCurrImg] = useState(1);
+  const [currAge, setCurrAge] = useState("");
+  const [currHeight, setCurrHeight] = useState<number>();
 
   const [state, dispatch] = useContext(CartContext);
   const { cartList } = state;
@@ -28,7 +30,19 @@ const ProductInfo: React.FC<IProp> = (props) => {
     ...dataProduct,
     currQuantity: quantity,
     currColor: currColor,
+    currAge: currAge,
+    currHeight: currHeight,
   };
+
+  let isBtnActive = false;
+
+  if (
+    cartProduct.currColor !== "" &&
+    cartProduct.currHeight !== undefined &&
+    currAge !== ""
+  ) {
+    isBtnActive = true;
+  }
 
   const handleDecreaseQuantity = () => {
     if (quantity > 1) {
@@ -42,6 +56,9 @@ const ProductInfo: React.FC<IProp> = (props) => {
 
   const handleAddCart = () => {
     dispatch(actions.addCart(cartProduct));
+  };
+  const handleOnChangeAge = (e: any) => {
+    setCurrAge(e.target.value);
   };
 
   return (
@@ -77,8 +94,11 @@ const ProductInfo: React.FC<IProp> = (props) => {
             </div>
 
             <div className={cx("sizeChart")}>
-              <i className="fa-solid fa-ruler-combined"></i>
-              <p>Sizes chart</p>
+              <i
+                className="fa-solid fa-ruler-combined"
+                onClick={() => setSizeChart(true)}
+              ></i>
+              <p onClick={() => setSizeChart(true)}>Sizes chart</p>
             </div>
 
             <div className={cx("price")}>
@@ -116,10 +136,10 @@ const ProductInfo: React.FC<IProp> = (props) => {
             {dataProduct.age && (
               <div className={cx("age")}>
                 <p>Age</p>
-                <select name="" id="">
+                <select onChange={handleOnChangeAge}>
                   <option value="">Choose an option</option>
                   {dataProduct.age?.map((item, index) => (
-                    <option key={index} value="">
+                    <option key={index} value={item}>
                       {item} years
                     </option>
                   ))}
@@ -156,7 +176,18 @@ const ProductInfo: React.FC<IProp> = (props) => {
                   onClick={handleIncreaseQuantity}
                 ></i>
               </div>
-              <button onClick={handleAddCart}> Add to cart</button>
+              {isBtnActive ? (
+                <div
+                  className={cx("product__btnActive")}
+                  onClick={handleAddCart}
+                >
+                  Add to cart
+                </div>
+              ) : (
+                <div className={cx("product__btn")} onClick={handleAddCart}>
+                  Add to cart
+                </div>
+              )}
             </div>
 
             <div className={cx("desc")}>
@@ -205,6 +236,59 @@ const ProductInfo: React.FC<IProp> = (props) => {
           </div>
         </div>
       </div>
+      {sizeChart && (
+        <div className={cx("sizeChart__modal")}>
+          <div
+            className={cx("sizeChart__overlay")}
+            onClick={() => setSizeChart(false)}
+          ></div>
+          <div className={cx("sizeChart__container")}>
+            <div
+              className={cx("sizeChart__btnClose")}
+              onClick={() => setSizeChart(false)}
+            >
+              <i className="fa-solid fa-xmark"></i>
+            </div>
+            <h4>Sizes chart</h4>
+            <table>
+              <thead>
+                <tr>
+                  <th>Height</th>
+                  <th>Weight</th>
+                  <th>Age</th>
+                  <th>Size</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>49-60 cm</td>
+                  <td>3-4 kg</td>
+                  <td>0-2 months</td>
+                  <td>50-56</td>
+                </tr>
+                <tr>
+                  <td>61-68 cm</td>
+                  <td> 5-8 kg </td>
+                  <td>2-6 months </td>
+                  <td>62-68</td>
+                </tr>
+                <tr>
+                  <td>69-80 cm </td>
+                  <td> 9-11 kg</td>
+                  <td> 6-12 months</td>
+                  <td>74-80</td>
+                </tr>
+                <tr>
+                  <td>81-92 cm </td>
+                  <td> 12-14 kg</td>
+                  <td>1-2 years</td>
+                  <td>86-92</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

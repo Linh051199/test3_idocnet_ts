@@ -80,6 +80,24 @@
         margin-top: 70px;
         margin-bottom: 20px;
 
+        div {
+          position: relative;
+          span {
+            position: absolute;
+            top: -10px;
+            left: 22px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: #eac989;
+            color: var(--text-color-white);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+
         i {
           font-size: var(--font-size20);
           &:hover {

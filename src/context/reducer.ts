@@ -1,9 +1,18 @@
 import storage from "../Util/storage";
 import { cartData } from "../data/data";
 
-import { ADD_CART, DELETE_CART, UPDATE_CART } from "./constants";
+import {
+  ADD_CART,
+  DELETE_CART,
+  UPDATE_CART,
+  ADD_WISHLISH,
+  REMOVE_WISHLISH,
+  DECREASE__QUANTITY,
+  INCREASE__QUANTITY,
+} from "./constants";
 let initState: any = {
   cartList: storage.get(),
+  wishlish: 0,
 };
 
 const reducer = (state: any, action: any) => {
@@ -54,6 +63,31 @@ const reducer = (state: any, action: any) => {
       return {
         ...state,
         cartList: newArrUpdate,
+      };
+
+    case ADD_WISHLISH:
+      let currWishListIn = state.wishlish;
+
+      currWishListIn++;
+
+      return {
+        ...state,
+        wishlish: currWishListIn,
+      };
+
+    case REMOVE_WISHLISH:
+      let currWishListDe = state.wishlish;
+
+      currWishListDe--;
+
+      return {
+        ...state,
+        wishlish: currWishListDe,
+      };
+    case DECREASE__QUANTITY:
+      console.log("payload:", action.payload);
+      return {
+        ...state,
       };
     default:
       throw new Error(`Invalid action ${action.type}`);

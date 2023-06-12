@@ -16,7 +16,6 @@ interface IProps {
 
 const CartItem: React.FC<IProps> = (props) => {
   const { data, index } = props;
-  console.log("🚀 ~ data:", data.currQuantity);
   const [state, dispatch] = useContext(CartContext);
 
   const [currQuantity, setCurrentQuantity] = useState(data.currQuantity);
@@ -29,13 +28,16 @@ const CartItem: React.FC<IProps> = (props) => {
   const getSubtotal = (number: any, price: number) => {
     return (number * price).toFixed(2);
   };
+  console.log("quantity", currQuantity);
   const newCartIncrease = { ...data, currQuantity: currQuantity + 1 };
   const newCartDecrease = { ...data, currQuantity: currQuantity - 1 };
+
   const handleOnClickDecrease = () => {
     if (currQuantity > 1) {
       setCurrentQuantity(currQuantity - 1);
     }
     dispatch(actions.updateCart(newCartDecrease));
+    // dispatch(actions.decreaseQuantity(data));
   };
 
   const handleOnClickIncrease = () => {

@@ -34,10 +34,10 @@ const Slider = () => {
                 ></button>
               </div>
               <div className="carousel-inner">
-                <div className="carousel-item ">
+                <div className="carousel-item active">
                   <Slider1 />
                 </div>
-                <div className="carousel-item active">
+                <div className="carousel-item ">
                   <Slider2 />
                 </div>
               </div>

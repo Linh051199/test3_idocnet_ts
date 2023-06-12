@@ -26,4 +26,6 @@ export interface ICartType {
   age?: string[];
   currColor: string;
   currQuantity: number;
+  currAge: string;
+  currHeight: number;
 }
