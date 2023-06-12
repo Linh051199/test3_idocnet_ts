@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/test3_idocnet_ts/static/css/main.f58b9e30.css",
-    "main.js": "/test3_idocnet_ts/static/js/main.4d5310e3.js",
+    "main.js": "/test3_idocnet_ts/static/js/main.6fc27275.js",
     "index.html": "/test3_idocnet_ts/index.html",
     "static/media/download.svg": "/test3_idocnet_ts/static/media/download.08faaf22a50c357ad433649115e98a34.svg",
     "main.f58b9e30.css.map": "/test3_idocnet_ts/static/css/main.f58b9e30.css.map",
-    "main.4d5310e3.js.map": "/test3_idocnet_ts/static/js/main.4d5310e3.js.map"
+    "main.6fc27275.js.map": "/test3_idocnet_ts/static/js/main.6fc27275.js.map"
   },
   "entrypoints": [
     "static/css/main.f58b9e30.css",
-    "static/js/main.4d5310e3.js"
+    "static/js/main.6fc27275.js"
   ]
 }
